@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Céleste Couture - Atelier de Couture pour Femme</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts for elegance -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fef9f6;
+            color: #2c1810;
+            overflow-x: hidden;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .animate-slideInLeft {
+            animation: slideInLeft 1s ease forwards;
+        }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1e9e4;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #c8a27a;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #b08b63;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c1810 0%, #4a3429 100%);
+            color: #fff;
+            padding: 1rem 5%;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: 2px;
+            background: linear-gradient(45deg, #e6c7a8, #ffdab9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: transform 0.3s;
+        }
+
+        .logo h1:hover {
+            transform: scale(1.05);
+        }
+
+        .contact-info {
+            display: flex;
+            gap: 2rem;
+            font-size: 0.9rem;
+        }
+
+        .contact-info a {
+            color: #e6c7a8;
+            text-decoration: none;
+            transition: color 0.3s, transform 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .contact-info a:hover {
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            z-index: 999;
+            transition: all 0.3s ease;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(10deg);
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+        }
+
+        .hero {
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #fff5eb 0%, #ffe8d9 100%);
+            padding: 3rem 0;
+        }
+
+        .hero-content {
+            text-align: center;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1.5s ease;
+        }
+
+        .hero-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #2c1810;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: #4a3429;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .slider-container {
+            width: 100%;
+            overflow: hidden;
+            padding: 2rem 0;
+        }
+
+        .slider-track {
+            display: flex;
+            width: fit-content;
+            animation: marquee 30s linear infinite;
+        }
+
+        .slider-track:hover {
+            animation-play-state: paused;
+        }
+
+        .slide {
+            flex: 0 0 300px;
+            margin: 0 15px;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .slide:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .slide img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .slide:hover img {
+            transform: scale(1.05);
+        }
+
+        .slide-info {
+            padding: 1.5rem;
+            background: white;
+        }
+
+        .slide-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #2c1810;
+        }
+
+        .slide-info p {
+            color: #6b4f3f;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .btn-choose {
+            background: linear-gradient(135deg, #2c1810, #4a3429);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            font-size: 1rem;
+        }
+
+        .btn-choose:hover {
+            background: linear-gradient(135deg, #4a3429, #2c1810);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .models-section {
+            padding: 5rem 5%;
+            background: #fff;
+        }
+
+        .section-title {
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            color: #2c1810;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, #c8a27a, #e6c7a8);
+        }
+
+        .models-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .model-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .model-card:nth-child(odd) {
+            animation-delay: 0.2s;
+        }
+
+        .model-card:nth-child(even) {
+            animation-delay: 0.4s;
+        }
+
+        .model-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 40px rgba(0,0,0,0.15);
+        }
+
+        .model-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .model-card:hover .model-img {
+            transform: scale(1.05);
+        }
+
+        .model-details {
+            padding: 1.8rem;
+        }
+
+        .model-details h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: #2c1810;
+        }
+
+        .model-details p {
+            color: #6b4f3f;
+            margin-bottom: 0.8rem;
+            line-height: 1.5;
+        }
+
+        .model-tags {
+            display: flex;
+            gap: 10px;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #f0e0d4;
+            color: #2c1810;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .tag.african {
+            background: #c8a27a;
+            color: white;
+        }
+
+        .tag.french {
+            background: #b38b6d;
+            color: white;
+        }
+
+        .btn-choose-card {
+            background: linear-gradient(135deg, #c8a27a, #b08b63);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .btn-choose-card:hover {
+            background: linear-gradient(135deg, #b08b63, #c8a27a);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(184, 142, 105, 0.4);
+        }
+
+        .contact-form-section {
+            background: linear-gradient(135deg, #2c1810 0%, #4a3429 100%);
+            padding: 5rem 5%;
+            color: white;
+        }
+
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 3rem;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .form-container h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: rgba(255,255,255,0.9);
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px #c8a27a;
+            transform: translateY(-2px);
+        }
+
+        .btn-submit {
+            background: linear-gradient(45deg, #c8a27a, #e6c7a8);
+            color: #2c1810;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(230, 199, 168, 0.3);
+            background: linear-gradient(45deg, #e6c7a8, #c8a27a);
+        }
+
+        footer {
+            background: #1f130c;
+            color: #e6c7a8;
+            padding: 3rem 5%;
+            text-align: center;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-info h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-info p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-info i {
+            margin-right: 10px;
+            color: #c8a27a;
+        }
+
+        .copyright {
+            border-top: 1px solid #4a3429;
+            padding-top: 2rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h2 {
+                font-size: 2.5rem;
+            }
+            
+            .contact-info {
+                display: none;
+            }
+            
+            header {
+                justify-content: center;
+            }
+            
+            .slide {
+                flex: 0 0 250px;
+            }
+            
+            .slide img {
+                height: 300px;
+            }
+            
+            .form-container {
+                padding: 2rem;
+            }
+            
+            .models-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h2 {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .slide {
+                flex: 0 0 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Céleste Couture</h1>
+        </div>
+        <div class="contact-info">
+            <a href="tel:+2290148701677"><i class="fas fa-phone-alt"></i> 0148701677</a>
+            <a href="https://wa.me/2290148701677" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            <a href="mailto:kpohihounhouefa@gmail.com"><i class="far fa-envelope"></i> Email</a>
+            <span><i class="fas fa-map-marker-alt"></i> Calavi Aïdégnon fin von Chez Fred</span>
+        </div>
+    </header>
+
+    <a href="https://wa.me/2290148701677" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Paris rencontre le Bénin</h2>
+            <p>Des coupes françaises, des tissus béninois : l'élégance fusion</p>
+        </div>
+        <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+            </div>
+        </div>
+    </section>
+
+    <section class="models-section" id="models">
+        <h2 class="section-title">Nos Créations Fusion</h2>
+        <div class="models-grid" id="modelsGrid">
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <div class="form-container">
+            <h2>Demande de Renseignement</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Votre nom complet" required>
+                </div>
+                <div class="form-group">
+                    <input type="tel" id="phone" placeholder="Votre téléphone" required>
+                </div>
+                <div class="form-group">
+                    <select id="modelSelect" required>
+                        <option value="">Choisissez un modèle (optionnel)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="4" placeholder="Votre message..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Envoyer sur WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-info">
+                <h3>Céleste Couture</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Calavi Aïdégnon fin von Chez Fred, Bénin</p>
+                <p><i class="fas fa-phone"></i> 0148701677</p>
+                <p><i class="far fa-envelope"></i> kpohihounhouefa@gmail.com</p>
+            </div>
+            <div class="footer-info">
+                <h3>Horaires</h3>
+                <p>Lundi - Vendredi: 8h - 19h</p>
+                <p>Samedi: 9h - 17h</p>
+                <p>Dimanche: Fermé</p>
+            </div>
+            <div class="footer-info">
+                <h3>Suivez-nous</h3>
+                <p><i class="fab fa-instagram"></i> @celeste_couture</p>
+                <p><i class="fab fa-facebook"></i> Céleste Couture</p>
+                <p><i class="fab fa-whatsapp"></i> 0148701677</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 Céleste Couture - Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script>
+        // Données des modèles avec images CORRESPONDANT EXACTEMENT aux descriptions
+        const models = [
+            {
+                name: "Ensemble Mère Fille",
+                description: "Tenues assorties pour maman et fille en wax béninois - coupe française élégante",
+                for: "Femme, Enfant",
+                fabric: "Wax Béninois",
+                image: "https://images.pexels.com/photos/6567607/pexels-photo-6567607.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Duo", "Assorti", "Famille", "Wax", "Bénin"]
+            },
+            {
+                name: "Robe Chanel du Bénin",
+                description: "Robe droite en tweed revisité avec du tissu wax béninois, col Claudine",
+                for: "Femme",
+                fabric: "Tweed + Wax",
+                image: "https://images.pexels.com/photos/6311385/pexels-photo-6311385.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Chanel", "Tweed", "Wax", "Paris", "Bénin"]
+            },
+            {
+                name: "Jupe Dior en Pagne",
+                description: "Jupe crayon Dior en pagne tissé main de la région d'Abomey",
+                for: "Femme",
+                fabric: "Pagne tissé",
+                image: "https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Dior", "Crayon", "Abomey", "Bénin"]
+            },
+            {
+                name: "Blouse Yves Saint Laurent",
+                description: "Blouse YSL en soie avec motifs imprimés wax de Cotonou",
+                for: "Femme",
+                fabric: "Soie + Wax",
+                image: "https://images.pexels.com/photos/6311543/pexels-photo-6311543.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["YSL", "Soie", "Cotonou", "Paris"]
+            },
+            {
+                name: "Tailleur Saint-Tropez",
+                description: "Ensemble veste et short en bazin brodé, inspiration Riviera française",
+                for: "Demoiselle",
+                fabric: "Bazin riche",
+                image: "https://images.pexels.com/photos/6311539/pexels-photo-6311539.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Saint-Tropez", "Bazin", "Riviera", "Bénin"]
+            },
+            {
+                name: "Robe de Soirée Paris",
+                description: "Robe longue bustier en velours de coton béninois, perles de Ganvié",
+                for: "Femme",
+                fabric: "Velours Béninois",
+                image: "https://images.pexels.com/photos/6311535/pexels-photo-6311535.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Soirée", "Bustier", "Ganvié", "Paris"]
+            },
+            {
+                name: "Petite Robe Noire",
+                description: "PRN revisitée avec empiècements en pagne béninois et ceinture wax",
+                for: "Femme",
+                fabric: "Coton + Pagne",
+                image: "https://images.pexels.com/photos/6311528/pexels-photo-6311528.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["PRN", "Noire", "Pagne", "Paris", "Bénin"]
+            },
+            {
+                name: "Robe Tantine Chic",
+                description: "Robe midi évasée pour tata en lungi béninois, col montant français",
+                for: "Tata",
+                fabric: "Lungi",
+                image: "https://images.pexels.com/photos/6311512/pexels-photo-6311512.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Tata", "Midi", "Lungi", "Bénin"]
+            },
+            {
+                name: "Caftan Côte d'Azur",
+                description: "Caftan long en brocart, coupe fluide inspirée de la French Riviera",
+                for: "Femme",
+                fabric: "Brocart",
+                image: "https://images.pexels.com/photos/6311504/pexels-photo-6311504.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Caftan", "Riviera", "Brocart", "Bénin"]
+            },
+            {
+                name: "Robe Fillette",
+                description: "Robe trapèze pour petite fille en wax béninois, col Claudine",
+                for: "Enfant",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/6311489/pexels-photo-6311489.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Enfant", "Trapèze", "Wax", "Bénin"]
+            },
+            {
+                name: "Ensemble Pantacourt",
+                description: "Pantacourt et top en kente béninois, style parisien décontracté",
+                for: "Demoiselle",
+                fabric: "Kente",
+                image: "https://images.pexels.com/photos/6311465/pexels-photo-6311465.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Pantacourt", "Kente", "Paris", "Bénin"]
+            },
+            {
+                name: "Robe Patineuse",
+                description: "Robe patineuse en pagne avec motifs traditionnels du Bénin",
+                for: "Femme",
+                fabric: "Pagne",
+                image: "https://images.pexels.com/photos/6311451/pexels-photo-6311451.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Patineuse", "Traditionnel", "Pagne", "Bénin"]
+            },
+            {
+                name: "Tenue Grand-Mère",
+                description: "Ensemble confortable pour aînée en bazin, coupe classique française",
+                for: "Tata",
+                fabric: "Bazin",
+                image: "https://images.pexels.com/photos/6311447/pexels-photo-6311447.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Confort", "Bazin", "Classique", "Bénin"]
+            },
+            {
+                name: "Robe Mariage",
+                description: "Robe de mariée moderne en dentelle française et pagne béninois",
+                for: "Femme",
+                fabric: "Dentelle + Pagne",
+                image: "https://images.pexels.com/photos/6311429/pexels-photo-6311429.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Mariage", "Dentelle", "Pagne", "Bénin"]
+            },
+            {
+                name: "Ensemble Jumelles",
+                description: "Tenues identiques pour jumelles en wax béninois, coupe parisienne",
+                for: "Enfant",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/6311418/pexels-photo-6311418.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Jumelles", "Identique", "Enfant", "Bénin"]
+            },
+            {
+                name: "Robe Bustier",
+                description: "Robe bustier en wax béninois pour soirée chic",
+                for: "Demoiselle",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/6311398/pexels-photo-6311398.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Bustier", "Soirée", "Wax", "Bénin"]
+            },
+            {
+                name: "Tunique Brodée",
+                description: "Tunique longue brodée main pour tata, inspiration Provence",
+                for: "Tata",
+                fabric: "Bazin riche",
+                image: "https://images.pexels.com/photos/6311389/pexels-photo-6311389.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Tunique", "Broderie", "Provence", "Bénin"]
+            },
+            {
+                name: "Robe Portefeuille",
+                description: "Robe portefeuille en pagne béninois, style french chic",
+                for: "Femme",
+                fabric: "Pagne",
+                image: "https://images.pexels.com/photos/6311382/pexels-photo-6311382.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Portefeuille", "Chic", "Pagne", "Bénin"]
+            },
+            {
+                name: "Ensemble Bureau",
+                description: "Veste et jupe crayon en bazin, tenue professionnelle élégante",
+                for: "Femme",
+                fabric: "Bazin",
+                image: "https://images.pexels.com/photos/6311376/pexels-photo-6311376.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Bureau", "Professionnel", "Bazin", "Bénin"]
+            },
+            {
+                name: "Robe Demoiselle",
+                description: "Robe courte en wax pour demoiselle, coupe moderne",
+                for: "Demoiselle",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/6311368/pexels-photo-6311368.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Courte", "Moderne", "Wax", "Bénin"]
+            },
+            {
+                name: "Robe Fiançailles",
+                description: "Robe mi-longue en dentelle et pagne, style parisien romantique",
+                for: "Femme",
+                fabric: "Dentelle + Pagne",
+                image: "https://images.pexels.com/photos/6311359/pexels-photo-6311359.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Fiançailles", "Romantique", "Dentelle", "Bénin"]
+            },
+            {
+                name: "Ensemble Vacances",
+                description: "Short et top en wax, tenue de plage inspirée de la Côte d'Azur",
+                for: "Demoiselle",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/6311351/pexels-photo-6311351.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Vacances", "Plage", "Côte d'Azur", "Bénin"]
+            },
+            {
+                name: "Robe Maternité",
+                description: "Robe de grossesse confortable en lungi béninois, coupe française",
+                for: "Femme",
+                fabric: "Lungi",
+                image: "https://images.pexels.com/photos/6311342/pexels-photo-6311342.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Maternité", "Confort", "Lungi", "Bénin"]
+            },
+            {
+                name: "Ensemble Cérémonie",
+                description: "Ensemble grand boubou et foulard, cérémonie franco-béninoise",
+                for: "Femme",
+                fabric: "Bazin",
+                image: "https://images.pexels.com/photos/6311334/pexels-photo-6311334.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Cérémonie", "Boubou", "Bazin", "Bénin"]
+            },
+            {
+                name: "Robe Cocktail",
+                description: "Robe courte cocktail en brocart, soirée parisienne",
+                for: "Femme",
+                fabric: "Brocart",
+                image: "https://images.pexels.com/photos/6311325/pexels-photo-6311325.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Cocktail", "Soirée", "Brocart", "Bénin"]
+            },
+            {
+                name: "Tenue Fillette",
+                description: "Robe de cérémonie pour fillette en wax, col Claudine",
+                for: "Enfant",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/6311317/pexels-photo-6311317.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Enfant", "Cérémonie", "Claudine", "Bénin"]
+            },
+            {
+                name: "Ensemble Tatie",
+                description: "Tenue confortable et chic pour tata en pagne tissé",
+                for: "Tata",
+                fabric: "Pagne tissé",
+                image: "https://images.pexels.com/photos/6311309/pexels-photo-6311309.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Tata", "Confort", "Tissé", "Bénin"]
+            },
+            {
+                name: "Robe Maxi",
+                description: "Robe maxi longue en wax, bohème chic à la française",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/6311298/pexels-photo-6311298.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Maxi", "Bohème", "Wax", "Bénin"]
+            },
+            {
+                name: "Ensemble Soirée",
+                description: "Haut asymétrique et jupe longue en bazin, soirée chic",
+                for: "Femme",
+                fabric: "Bazin",
+                image: "https://images.pexels.com/photos/6311289/pexels-photo-6311289.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Asymétrique", "Soirée", "Bazin", "Bénin"]
+            },
+            {
+                name: "Robe de Printemps",
+                description: "Robe fleurie en pagne béninois, inspiration jardins français",
+                for: "Femme",
+                fabric: "Pagne",
+                image: "https://images.pexels.com/photos/6311278/pexels-photo-6311278.jpeg?auto=compress&cs=tinysrgb&w=600",
+                tags: ["Printemps", "Fleurie", "Pagne", "Bénin"]
+            }
+        ];
+
+        function generateSlider() {
+            const sliderTrack = document.getElementById('sliderTrack');
+            const allSlides = [...models, ...models];
+            sliderTrack.innerHTML = allSlides.map(model => `
+                <div class="slide">
+                    <img src="${model.image}" alt="${model.name}">
+                    <div class="slide-info">
+                        <h3>${model.name}</h3>
+                        <p>${model.description.substring(0, 60)}...</p>
+                        <button class="btn-choose" onclick="redirectToWhatsApp('${model.name}')">Choisir ce modèle</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function generateModelCards() {
+            const modelsGrid = document.getElementById('modelsGrid');
+            modelsGrid.innerHTML = models.map(model => `
+                <div class="model-card">
+                    <img src="${model.image}" alt="${model.name}" class="model-img">
+                    <div class="model-details">
+                        <h3>${model.name}</h3>
+                        <p>${model.description}</p>
+                        <p><strong>Pour:</strong> ${model.for}</p>
+                        <p><strong>Tissu:</strong> ${model.fabric}</p>
+                        <div class="model-tags">
+                            ${model.tags.map(tag => {
+                                let tagClass = 'tag';
+                                if (['Paris', 'Chanel', 'Dior', 'YSL', 'Saint-Tropez', 'Riviera', 'Provence', 'Côte d\'Azur'].includes(tag)) {
+                                    tagClass += ' french';
+                                } else if (tag.includes('Bénin') || tag.includes('Wax') || tag.includes('Bazin') || tag.includes('Pagne') || tag.includes('Kente') || tag.includes('Lungi') || tag.includes('Ganvié') || tag.includes('Abomey') || tag.includes('Cotonou')) {
+                                    tagClass += ' african';
+                                }
+                                return `<span class="${tagClass}">${tag}</span>`;
+                            }).join('')}
+                        </div>
+                        <button class="btn-choose-card" onclick="redirectToWhatsApp('${model.name}')">Choisir ce modèle</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function populateModelSelect() {
+            const select = document.getElementById('modelSelect');
+            models.forEach(model => {
+                const option = document.createElement('option');
+                option.value = model.name;
+                option.textContent = model.name;
+                select.appendChild(option);
+            });
+        }
+
+        function redirectToWhatsApp(modelName = '') {
+            const phoneNumber = '2290148701677';
+            let message = 'Bonjour Céleste Couture, je suis intéressé(e) par vos créations fusion.';
+            
+            if (modelName) {
+                message = `Bonjour Céleste Couture, je suis intéressé(e) par le modèle "${modelName}". Pouvez-vous me donner plus d'informations sur cette création ?`;
+            }
+            
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(whatsappURL, '_blank');
+        }
+
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const model = document.getElementById('modelSelect').value;
+            const message = document.getElementById('message').value;
+            
+            const phoneNumber = '2290148701677';
+            let whatsappMessage = `Bonjour Céleste Couture, je suis ${name}.\n\n`;
+            whatsappMessage += `📞 Téléphone: ${phone}\n`;
+            
+            if (model) {
+                whatsappMessage += `👗 Modèle intéressé: ${model}\n`;
+            }
+            
+            if (message) {
+                whatsappMessage += `📝 Message: ${message}\n`;
+            }
+            
+            whatsappMessage += `\nJe souhaite découvrir vos créations.`;
+            
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+            window.open(whatsappURL, '_blank');
+        });
+
+        generateSlider();
+        generateModelCards();
+        populateModelSelect();
+
+        const select = document.getElementById('modelSelect');
+        const firstOption = select.options[0];
+        firstOption.textContent = "Choisissez un modèle (optionnel)";
+    </script>
+</body>
+</html>
