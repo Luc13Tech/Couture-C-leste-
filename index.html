@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -366,11 +367,6 @@
             color: white;
         }
 
-        .tag.french {
-            background: #b38b6d;
-            color: white;
-        }
-
         .btn-choose-card {
             background: linear-gradient(135deg, #c8a27a, #b08b63);
             color: white;
@@ -559,8 +555,8 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h2>Paris rencontre le Bénin</h2>
-            <p>Des coupes françaises, des tissus béninois : l'élégance fusion</p>
+            <h2>L'Élégance Africaine</h2>
+            <p>Tissus authentiques du Bénin, créations uniques pour femmes, demoiselles, enfants et tatas</p>
         </div>
         <div class="slider-container">
             <div class="slider-track" id="sliderTrack">
@@ -569,7 +565,7 @@
     </section>
 
     <section class="models-section" id="models">
-        <h2 class="section-title">Nos Créations Fusion</h2>
+        <h2 class="section-title">Nos Créations Africaines</h2>
         <div class="models-grid" id="modelsGrid">
         </div>
     </section>
@@ -624,247 +620,247 @@
     </footer>
 
     <script>
-        // Données des modèles avec images CORRESPONDANT EXACTEMENT aux descriptions
+        // Données des modèles 100% AFRICAINS avec images corrigées correspondant aux descriptions
         const models = [
             {
-                name: "Ensemble Mère Fille",
-                description: "Tenues assorties pour maman et fille en wax béninois - coupe française élégante",
+                name: "Ensemble Mère et Fille",
+                description: "Tenues assorties en wax béninois pour maman et sa demoiselle - coupe moderne africaine",
                 for: "Femme, Enfant",
                 fabric: "Wax Béninois",
-                image: "https://images.pexels.com/photos/6567607/pexels-photo-6567607.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Duo", "Assorti", "Famille", "Wax", "Bénin"]
+                image: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/a4932920-49e8-4bfc-b242-576d62ed89f9.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+                tags: ["Duo", "Assorti", "Mère-Fille", "Wax", "Bénin"]
             },
             {
-                name: "Robe Chanel du Bénin",
-                description: "Robe droite en tweed revisité avec du tissu wax béninois, col Claudine",
+                name: "Roba Vodun",
+                description: "Robe longue en wax avec motifs vaudoun traditionnels du Bénin",
                 for: "Femme",
-                fabric: "Tweed + Wax",
-                image: "https://images.pexels.com/photos/6311385/pexels-photo-6311385.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Chanel", "Tweed", "Wax", "Paris", "Bénin"]
+                fabric: "Wax Béninois",
+                image: "https://i.etsystatic.com/7518594/r/il/5760cf/4065993763/il_fullxfull.4065993763_ohx9.jpg",
+                tags: ["Robe longue", "Vaudoun", "Wax", "Bénin"]
             },
             {
-                name: "Jupe Dior en Pagne",
-                description: "Jupe crayon Dior en pagne tissé main de la région d'Abomey",
+                name: "Ensemble Adjaho",
+                description: "Ensemble jupe et haut en pagne tissé main de la région d'Adjaho",
                 for: "Femme",
-                fabric: "Pagne tissé",
-                image: "https://images.pexels.com/photos/6311392/pexels-photo-6311392.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Dior", "Crayon", "Abomey", "Bénin"]
+                fabric: "Tissé Béninois",
+                image: "https://m.media-amazon.com/images/I/61Nnv5-JjvL.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg",
+                tags: ["Ensemble", "Tissé main", "Adjaho", "Bénin"]
             },
             {
-                name: "Blouse Yves Saint Laurent",
-                description: "Blouse YSL en soie avec motifs imprimés wax de Cotonou",
-                for: "Femme",
-                fabric: "Soie + Wax",
-                image: "https://images.pexels.com/photos/6311543/pexels-photo-6311543.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["YSL", "Soie", "Cotonou", "Paris"]
-            },
-            {
-                name: "Tailleur Saint-Tropez",
-                description: "Ensemble veste et short en bazin brodé, inspiration Riviera française",
+                name: "Jupe Kpassè",
+                description: "Jupe midi en wax avec motifs de paniers tressés béninois",
                 for: "Demoiselle",
+                fabric: "Wax",
+                image: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5d6b5db8-deef-4c8a-a62c-c2394588a933.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+                tags: ["Jupe", "Midi", "Kpassè", "Bénin"]
+            },
+            {
+                name: "Robe Bazin Bénin",
+                description: "Robe courte en bazin riche brodé main du Bénin",
+                for: "Femme",
                 fabric: "Bazin riche",
-                image: "https://images.pexels.com/photos/6311539/pexels-photo-6311539.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Saint-Tropez", "Bazin", "Riviera", "Bénin"]
+                image: "https://m.media-amazon.com/images/I/81etvvrqMwL.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg",
+                tags: ["Bazin", "Robe courte", "Broderie", "Bénin"]
             },
             {
-                name: "Robe de Soirée Paris",
-                description: "Robe longue bustier en velours de coton béninois, perles de Ganvié",
-                for: "Femme",
-                fabric: "Velours Béninois",
-                image: "https://images.pexels.com/photos/6311535/pexels-photo-6311535.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Soirée", "Bustier", "Ganvié", "Paris"]
-            },
-            {
-                name: "Petite Robe Noire",
-                description: "PRN revisitée avec empiècements en pagne béninois et ceinture wax",
-                for: "Femme",
-                fabric: "Coton + Pagne",
-                image: "https://images.pexels.com/photos/6311528/pexels-photo-6311528.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["PRN", "Noire", "Pagne", "Paris", "Bénin"]
-            },
-            {
-                name: "Robe Tantine Chic",
-                description: "Robe midi évasée pour tata en lungi béninois, col montant français",
+                name: "Roba Tanti",
+                description: "Robe confortable pour tata en pagne tissé de la vallée de l'Ouémé",
                 for: "Tata",
                 fabric: "Lungi",
-                image: "https://images.pexels.com/photos/6311512/pexels-photo-6311512.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Tata", "Midi", "Lungi", "Bénin"]
+                image: "https://i.ytimg.com/vi/rETEkiuibXA/maxresdefault.jpg",
+                tags: ["Tata", "Confort", "Lungi", "Ouémé", "Bénin"]
             },
             {
-                name: "Caftan Côte d'Azur",
-                description: "Caftan long en brocart, coupe fluide inspirée de la French Riviera",
+                name: "Caftan Abomey",
+                description: "Grand caftan en brocart avec motifs des rois d'Abomey",
                 for: "Femme",
                 fabric: "Brocart",
-                image: "https://images.pexels.com/photos/6311504/pexels-photo-6311504.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Caftan", "Riviera", "Brocart", "Bénin"]
+                image: "https://m.media-amazon.com/images/I/61fuqlLQ7DL.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg",
+                tags: ["Caftan", "Abomey", "Brocart", "Bénin"]
             },
             {
-                name: "Robe Fillette",
-                description: "Robe trapèze pour petite fille en wax béninois, col Claudine",
+                name: "Princesse Ouidah",
+                description: "Robe de cérémonie pour fillette en wax - inspiration Ouidah",
                 for: "Enfant",
                 fabric: "Wax",
-                image: "https://images.pexels.com/photos/6311489/pexels-photo-6311489.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Enfant", "Trapèze", "Wax", "Bénin"]
+                image: "https://i.etsystatic.com/7761769/r/il/813724/1615757682/il_fullxfull.1615757682_4ll6.jpg",
+                tags: ["Enfant", "Princesse", "Ouidah", "Bénin"]
             },
             {
-                name: "Ensemble Pantacourt",
-                description: "Pantacourt et top en kente béninois, style parisien décontracté",
+                name: "Ensemble Porto-Novo",
+                description: "Ensemble pantalon et top en tissu kente - style Porto-Novo",
                 for: "Demoiselle",
                 fabric: "Kente",
-                image: "https://images.pexels.com/photos/6311465/pexels-photo-6311465.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Pantacourt", "Kente", "Paris", "Bénin"]
+                image: "https://m.media-amazon.com/images/I/51UscWfk5YL.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg",
+                tags: ["Kente", "Porto-Novo", "Bénin"]
             },
             {
-                name: "Robe Patineuse",
-                description: "Robe patineuse en pagne avec motifs traditionnels du Bénin",
+                name: "Roba Dangbé",
+                description: "Robe patineuse en pagne avec motifs python (Dangbé) du Bénin",
                 for: "Femme",
-                fabric: "Pagne",
-                image: "https://images.pexels.com/photos/6311451/pexels-photo-6311451.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Patineuse", "Traditionnel", "Pagne", "Bénin"]
+                fabric: "Pagne Béninois",
+                image: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/9c819eca-d35c-4455-888f-ac28ac137173.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+                tags: ["Patineuse", "Dangbé", "Pagne", "Bénin"]
             },
             {
-                name: "Tenue Grand-Mère",
-                description: "Ensemble confortable pour aînée en bazin, coupe classique française",
+                name: "Ensemble Yèkè",
+                description: "Tenue élégante pour nos aînées en bazin - modèle Yèkè",
                 for: "Tata",
                 fabric: "Bazin",
-                image: "https://images.pexels.com/photos/6311447/pexels-photo-6311447.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Confort", "Bazin", "Classique", "Bénin"]
+                image: "https://i.etsystatic.com/25132813/r/il/80a65f/3472105712/il_fullxfull.3472105712_9ay6.jpg",
+                tags: ["Tata", "Bazin", "Yèkè", "Bénin"]
             },
             {
-                name: "Robe Mariage",
-                description: "Robe de mariée moderne en dentelle française et pagne béninois",
+                name: "Roba Zangbéto",
+                description: "Robe pour cérémonies traditionnelles inspirée des Zangbéto",
                 for: "Femme",
-                fabric: "Dentelle + Pagne",
-                image: "https://images.pexels.com/photos/6311429/pexels-photo-6311429.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Mariage", "Dentelle", "Pagne", "Bénin"]
+                fabric: "Tissu traditionnel",
+                image: "https://flexiafrica.com/cdn/shop/files/african-baby-girl.png?v=1763886003&width=3840",
+                tags: ["Danse", "Zangbéto", "Bénin"]
             },
             {
-                name: "Ensemble Jumelles",
-                description: "Tenues identiques pour jumelles en wax béninois, coupe parisienne",
+                name: "Jumelles Natitingou",
+                description: "Tenues identiques pour deux petites filles - tissu traditionnel",
                 for: "Enfant",
                 fabric: "Wax",
-                image: "https://images.pexels.com/photos/6311418/pexels-photo-6311418.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Jumelles", "Identique", "Enfant", "Bénin"]
+                image: "https://m.media-amazon.com/images/I/71yeVzhXzAL.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg",
+                tags: ["Jumelles", "Natitingou", "Bénin"]
             },
             {
-                name: "Robe Bustier",
-                description: "Robe bustier en wax béninois pour soirée chic",
+                name: "Rosa Bénin",
+                description: "Robe bustier en pagne avec motifs de roses du Bénin",
                 for: "Demoiselle",
                 fabric: "Wax",
-                image: "https://images.pexels.com/photos/6311398/pexels-photo-6311398.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Bustier", "Soirée", "Wax", "Bénin"]
+                image: "https://cdn-cms.f-static.net/uploads/1040687/800_5b19741eef56b.jpg",
+                tags: ["Bustier", "Roses", "Demoiselle", "Bénin"]
             },
             {
-                name: "Tunique Brodée",
-                description: "Tunique longue brodée main pour tata, inspiration Provence",
+                name: "Tunique Parakou",
+                description: "Tunique brodée pour grandes occasions - style Parakou",
                 for: "Tata",
                 fabric: "Bazin riche",
-                image: "https://images.pexels.com/photos/6311389/pexels-photo-6311389.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Tunique", "Broderie", "Provence", "Bénin"]
+                image: "https://flexiafrica.co.nz/cdn/shop/files/remove-the-up-50.png?v=1765939052&width=3840",
+                tags: ["Tunique", "Parakou", "Bazin", "Bénin"]
             },
             {
-                name: "Robe Portefeuille",
-                description: "Robe portefeuille en pagne béninois, style french chic",
+                name: "Roba Pendjari",
+                description: "Robe longue en velours avec ceinture perle - inspiration Pendjari",
+                for: "Femme",
+                fabric: "Velours",
+                image: "https://d17a17kld06uk8.cloudfront.net/products/3X8E7FZ/8XDVR8EW-large.webp",
+                tags: ["Velours", "Longue", "Pendjari", "Bénin"]
+            },
+            {
+                name: "Ensemble Grand Marché",
+                description: "Haut col V et jupe crayon en pagne - style Grand Marché de Cotonou",
                 for: "Femme",
                 fabric: "Pagne",
-                image: "https://images.pexels.com/photos/6311382/pexels-photo-6311382.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Portefeuille", "Chic", "Pagne", "Bénin"]
-            },
-            {
-                name: "Ensemble Bureau",
-                description: "Veste et jupe crayon en bazin, tenue professionnelle élégante",
-                for: "Femme",
-                fabric: "Bazin",
-                image: "https://images.pexels.com/photos/6311376/pexels-photo-6311376.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Bureau", "Professionnel", "Bazin", "Bénin"]
+                image: "https://zawadi254.com/wp-content/uploads/2023/10/african-dresses.jpg",
+                tags: ["Crayon", "Grand Marché", "Cotonou", "Bénin"]
             },
             {
                 name: "Robe Demoiselle",
-                description: "Robe courte en wax pour demoiselle, coupe moderne",
+                description: "Robe courte en wax pour demoiselle, coupe moderne africaine",
                 for: "Demoiselle",
                 fabric: "Wax",
-                image: "https://images.pexels.com/photos/6311368/pexels-photo-6311368.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Courte", "Moderne", "Wax", "Bénin"]
+                image: "http://www.diyanu.com/cdn/shop/articles/african-print-dresses-for-prom-celebrating-culture-with-style-8760371.jpg?v=1760579486&width=2048",
+                tags: ["Courte", "Moderne", "Demoiselle", "Bénin"]
             },
             {
-                name: "Robe Fiançailles",
-                description: "Robe mi-longue en dentelle et pagne, style parisien romantique",
-                for: "Femme",
-                fabric: "Dentelle + Pagne",
-                image: "https://images.pexels.com/photos/6311359/pexels-photo-6311359.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Fiançailles", "Romantique", "Dentelle", "Bénin"]
-            },
-            {
-                name: "Ensemble Vacances",
-                description: "Short et top en wax, tenue de plage inspirée de la Côte d'Azur",
-                for: "Demoiselle",
-                fabric: "Wax",
-                image: "https://images.pexels.com/photos/6311351/pexels-photo-6311351.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Vacances", "Plage", "Côte d'Azur", "Bénin"]
-            },
-            {
-                name: "Robe Maternité",
-                description: "Robe de grossesse confortable en lungi béninois, coupe française",
-                for: "Femme",
-                fabric: "Lungi",
-                image: "https://images.pexels.com/photos/6311342/pexels-photo-6311342.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Maternité", "Confort", "Lungi", "Bénin"]
-            },
-            {
-                name: "Ensemble Cérémonie",
-                description: "Ensemble grand boubou et foulard, cérémonie franco-béninoise",
+                name: "Boubou Reine",
+                description: "Grand boubou en tissu brodé main du Bénin pour cérémonies",
                 for: "Femme",
                 fabric: "Bazin",
-                image: "https://images.pexels.com/photos/6311334/pexels-photo-6311334.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Cérémonie", "Boubou", "Bazin", "Bénin"]
+                image: "https://gpjs3bucket.s3.amazonaws.com/wp-content/uploads/2015/04/26215842/o-jpg.jpg",
+                tags: ["Boubou", "Reine", "Cérémonie", "Bénin"]
             },
             {
-                name: "Robe Cocktail",
-                description: "Robe courte cocktail en brocart, soirée parisienne",
+                name: "Roba Pluie",
+                description: "Robe imprimée wax avec motifs de pluie (tradition béninoise)",
                 for: "Femme",
-                fabric: "Brocart",
-                image: "https://images.pexels.com/photos/6311325/pexels-photo-6311325.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Cocktail", "Soirée", "Brocart", "Bénin"]
+                fabric: "Wax",
+                image: "https://img.alicdn.com/imgextra/i1/6000000003462/O1CN01apdVN11bRdthY58Hm_!!6000000003462-0-tbvideo.jpg",
+                tags: ["Imprimé", "Pluie", "Wax", "Bénin"]
             },
             {
-                name: "Tenue Fillette",
-                description: "Robe de cérémonie pour fillette en wax, col Claudine",
+                name: "Fillette Djègbadji",
+                description: "Robe courte pour fillette en wax - style Djègbadji",
                 for: "Enfant",
                 fabric: "Wax",
-                image: "https://images.pexels.com/photos/6311317/pexels-photo-6311317.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Enfant", "Cérémonie", "Claudine", "Bénin"]
+                image: "https://c8.alamy.com/comp/BM6965/colored-traditional-dress-of-masai-women-masai-mara-kenya-east-africa-BM6965.jpg",
+                tags: ["Enfant", "Djègbadji", "Wax", "Bénin"]
             },
             {
-                name: "Ensemble Tatie",
-                description: "Tenue confortable et chic pour tata en pagne tissé",
-                for: "Tata",
-                fabric: "Pagne tissé",
-                image: "https://images.pexels.com/photos/6311309/pexels-photo-6311309.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Tata", "Confort", "Tissé", "Bénin"]
-            },
-            {
-                name: "Robe Maxi",
-                description: "Robe maxi longue en wax, bohème chic à la française",
-                for: "Femme",
-                fabric: "Wax",
-                image: "https://images.pexels.com/photos/6311298/pexels-photo-6311298.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Maxi", "Bohème", "Wax", "Bénin"]
-            },
-            {
-                name: "Ensemble Soirée",
-                description: "Haut asymétrique et jupe longue en bazin, soirée chic",
-                for: "Femme",
-                fabric: "Bazin",
-                image: "https://images.pexels.com/photos/6311289/pexels-photo-6311289.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Asymétrique", "Soirée", "Bazin", "Bénin"]
-            },
-            {
-                name: "Robe de Printemps",
-                description: "Robe fleurie en pagne béninois, inspiration jardins français",
+                name: "Roba Aklala",
+                description: "Robe portefeuille en pagne avec motifs aklala du Bénin",
                 for: "Femme",
                 fabric: "Pagne",
-                image: "https://images.pexels.com/photos/6311278/pexels-photo-6311278.jpeg?auto=compress&cs=tinysrgb&w=600",
-                tags: ["Printemps", "Fleurie", "Pagne", "Bénin"]
+                image: "https://m.media-amazon.com/images/I/71274IPxB2L.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg",
+                tags: ["Portefeuille", "Aklala", "Pagne", "Bénin"]
+            },
+            {
+                name: "Mariage Coutumier",
+                description: "Ensemble complet pour mariage coutumier béninois",
+                for: "Femme",
+                fabric: "Bazin + Wax",
+                image: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e8c17635-46ff-4bd6-b10e-27c62e1091c6.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+                tags: ["Mariage", "Coutumier", "Bénin"]
+            },
+            {
+                name: "Fiancée Sakété",
+                description: "Robe mi-longue en dentelle et pagne - style Sakété",
+                for: "Demoiselle",
+                fabric: "Dentelle + Pagne",
+                image: "https://c8.alamy.com/comp/3D09TW6/benin-ouidah-district-portrait-of-a-woman-in-traditional-dress-during-a-voodoo-ceremony-3D09TW6.jpg",
+                tags: ["Fiancée", "Sakété", "Dentelle", "Bénin"]
+            },
+            {
+                name: "Maman Moderne",
+                description: "Tenue confortable pour future maman en tissu béninois",
+                for: "Femme",
+                fabric: "Lungi",
+                image: "http://news.bbc.co.uk/media/images/45857000/jpg/_45857581_dyeing1_bbc_766.jpg",
+                tags: ["Maternité", "Lungi", "Bénin"]
+            },
+            {
+                name: "Rolex Cotonou",
+                description: "Ensemble top et foulard assorti en wax de Cotonou",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://flexiafrica.com/cdn/shop/files/new-arrivals-african-clothing-mens-without-text.png?v=1765939347&width=3840",
+                tags: ["Top", "Foulard", "Cotonou", "Bénin"]
+            },
+            {
+                name: "Kaba Allada",
+                description: "Kaba moderne en tissu béninois d'Allada",
+                for: "Tata",
+                fabric: "Tissu Béninois",
+                image: "https://i.ytimg.com/vi/h4SQMZalNC0/maxresdefault.jpg",
+                tags: ["Kaba", "Allada", "Tata", "Bénin"]
+            },
+            {
+                name: "Sœurs Kétou",
+                description: "Tenues assorties pour deux sœurs - tissu traditionnel de Kétou",
+                for: "Enfant, Demoiselle",
+                fabric: "Wax",
+                image: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/a4932920-49e8-4bfc-b242-576d62ed89f9.__CR0,0,970,600_PT0_SX970_V1___.jpg",
+                tags: ["Sœurs", "Kétou", "Bénin"]
+            },
+            {
+                name: "Soirée Grand Popo",
+                description: "Robe longue fendue en brocart - inspiration Grand Popo",
+                for: "Femme",
+                fabric: "Brocart",
+                image: "https://i.etsystatic.com/7518594/r/il/5760cf/4065993763/il_fullxfull.4065993763_ohx9.jpg",
+                tags: ["Soirée", "Grand Popo", "Brocart", "Bénin"]
+            },
+            {
+                name: "Villageoise Tchaourou",
+                description: "Ensemble traditionnel pour cérémonies de village - Tchaourou",
+                for: "Tata",
+                fabric: "Tissu traditionnel",
+                image: "https://m.media-amazon.com/images/I/61Nnv5-JjvL.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg",
+                tags: ["Traditionnel", "Tchaourou", "Bénin"]
             }
         ];
 
@@ -873,7 +869,7 @@
             const allSlides = [...models, ...models];
             sliderTrack.innerHTML = allSlides.map(model => `
                 <div class="slide">
-                    <img src="${model.image}" alt="${model.name}">
+                    <img src="${model.image}" alt="${model.name}" onerror="this.src='https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=400'">
                     <div class="slide-info">
                         <h3>${model.name}</h3>
                         <p>${model.description.substring(0, 60)}...</p>
@@ -887,22 +883,14 @@
             const modelsGrid = document.getElementById('modelsGrid');
             modelsGrid.innerHTML = models.map(model => `
                 <div class="model-card">
-                    <img src="${model.image}" alt="${model.name}" class="model-img">
+                    <img src="${model.image}" alt="${model.name}" class="model-img" onerror="this.src='https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=400'">
                     <div class="model-details">
                         <h3>${model.name}</h3>
                         <p>${model.description}</p>
                         <p><strong>Pour:</strong> ${model.for}</p>
                         <p><strong>Tissu:</strong> ${model.fabric}</p>
                         <div class="model-tags">
-                            ${model.tags.map(tag => {
-                                let tagClass = 'tag';
-                                if (['Paris', 'Chanel', 'Dior', 'YSL', 'Saint-Tropez', 'Riviera', 'Provence', 'Côte d\'Azur'].includes(tag)) {
-                                    tagClass += ' french';
-                                } else if (tag.includes('Bénin') || tag.includes('Wax') || tag.includes('Bazin') || tag.includes('Pagne') || tag.includes('Kente') || tag.includes('Lungi') || tag.includes('Ganvié') || tag.includes('Abomey') || tag.includes('Cotonou')) {
-                                    tagClass += ' african';
-                                }
-                                return `<span class="${tagClass}">${tag}</span>`;
-                            }).join('')}
+                            ${model.tags.map(tag => `<span class="tag african">${tag}</span>`).join('')}
                         </div>
                         <button class="btn-choose-card" onclick="redirectToWhatsApp('${model.name}')">Choisir ce modèle</button>
                     </div>
@@ -922,10 +910,10 @@
 
         function redirectToWhatsApp(modelName = '') {
             const phoneNumber = '2290148701677';
-            let message = 'Bonjour Céleste Couture, je suis intéressé(e) par vos créations fusion.';
+            let message = 'Bonjour Céleste Couture, je suis intéressé(e) par vos créations africaines.';
             
             if (modelName) {
-                message = `Bonjour Céleste Couture, je suis intéressé(e) par le modèle "${modelName}". Pouvez-vous me donner plus d'informations sur cette création ?`;
+                message = `Bonjour Céleste Couture, je suis intéressé(e) par le modèle "${modelName}" en tissu béninois. Pouvez-vous me donner plus d'informations ?`;
             }
             
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
@@ -952,7 +940,7 @@
                 whatsappMessage += `📝 Message: ${message}\n`;
             }
             
-            whatsappMessage += `\nJe souhaite découvrir vos créations.`;
+            whatsappMessage += `\nJe suis intéressé(e) par vos créations en tissus béninois.`;
             
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
             window.open(whatsappURL, '_blank');
