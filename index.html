@@ -7,48 +7,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #fef9f6;
-            color: #2c1810;
-            overflow-x: hidden;
-        }
-
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes slideInLeft {
-            from { opacity: 0; transform: translateX(-50px); }
-            to { opacity: 1; transform: translateX(0); }
-        }
-
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-            100% { transform: translateY(0px); }
-        }
-
-        @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background-color: #fef9f6; color: #2c1810; overflow-x: hidden; }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes slideInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
+        @keyframes float { 0% { transform: translateY(0px); } 50% { transform: translateY(-10px); } 100% { transform: translateY(0px); } }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .animate-fadeInUp { animation: fadeInUp 1s ease forwards; }
         .animate-slideInLeft { animation: slideInLeft 1s ease forwards; }
-
         ::-webkit-scrollbar { width: 10px; }
         ::-webkit-scrollbar-track { background: #f1e9e4; }
         ::-webkit-scrollbar-thumb { background: #c8a27a; border-radius: 5px; }
         ::-webkit-scrollbar-thumb:hover { background: #b08b63; }
-
         header {
             background: linear-gradient(135deg, #2c1810 0%, #4a3429 100%);
             color: #fff;
@@ -63,7 +33,6 @@
             align-items: center;
             flex-wrap: wrap;
         }
-
         .logo h1 {
             font-family: 'Playfair Display', serif;
             font-size: 2rem;
@@ -74,29 +43,10 @@
             -webkit-text-fill-color: transparent;
             transition: transform 0.3s;
         }
-
         .logo h1:hover { transform: scale(1.05); }
-
-        .contact-info {
-            display: flex;
-            gap: 2rem;
-            font-size: 0.9rem;
-        }
-
-        .contact-info a {
-            color: #e6c7a8;
-            text-decoration: none;
-            transition: color 0.3s, transform 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-        }
-
-        .contact-info a:hover {
-            color: #fff;
-            transform: translateY(-2px);
-        }
-
+        .contact-info { display: flex; gap: 2rem; font-size: 0.9rem; }
+        .contact-info a { color: #e6c7a8; text-decoration: none; transition: color 0.3s, transform 0.3s; display: flex; align-items: center; gap: 5px; }
+        .contact-info a:hover { color: #fff; transform: translateY(-2px); }
         .whatsapp-float {
             position: fixed;
             bottom: 30px;
@@ -115,96 +65,21 @@
             transition: all 0.3s ease;
             animation: float 3s ease-in-out infinite;
         }
-
-        .whatsapp-float:hover {
-            transform: scale(1.1) rotate(10deg);
-            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
-        }
-
-        .hero {
-            margin-top: 80px;
-            position: relative;
-            overflow: hidden;
-            background: linear-gradient(135deg, #fff5eb 0%, #ffe8d9 100%);
-            padding: 3rem 0;
-        }
-
-        .hero-content {
-            text-align: center;
-            margin-bottom: 2rem;
-            animation: fadeInUp 1.5s ease;
-        }
-
-        .hero-content h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: #2c1810;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            color: #4a3429;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .slider-container {
-            width: 100%;
-            overflow: hidden;
-            padding: 2rem 0;
-        }
-
-        .slider-track {
-            display: flex;
-            width: fit-content;
-            animation: marquee 30s linear infinite;
-        }
-
+        .whatsapp-float:hover { transform: scale(1.1) rotate(10deg); box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4); }
+        .hero { margin-top: 80px; position: relative; overflow: hidden; background: linear-gradient(135deg, #fff5eb 0%, #ffe8d9 100%); padding: 3rem 0; }
+        .hero-content { text-align: center; margin-bottom: 2rem; animation: fadeInUp 1.5s ease; }
+        .hero-content h2 { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; color: #2c1810; text-shadow: 2px 2px 4px rgba(0,0,0,0.1); }
+        .hero-content p { font-size: 1.2rem; color: #4a3429; max-width: 600px; margin: 0 auto; }
+        .slider-container { width: 100%; overflow: hidden; padding: 2rem 0; }
+        .slider-track { display: flex; width: fit-content; animation: marquee 30s linear infinite; }
         .slider-track:hover { animation-play-state: paused; }
-
-        .slide {
-            flex: 0 0 300px;
-            margin: 0 15px;
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-
-        .slide:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        .slide img {
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
+        .slide { flex: 0 0 300px; margin: 0 15px; background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 15px 30px rgba(0,0,0,0.1); transition: all 0.3s ease; }
+        .slide:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .slide img { width: 100%; height: 300px; object-fit: cover; transition: transform 0.3s ease; }
         .slide:hover img { transform: scale(1.05); }
-
-        .slide-info {
-            padding: 1.5rem;
-            text-align: center;
-        }
-
-        .slide-info h3 {
-            font-size: 1rem;
-            color: #2c1810;
-            margin-bottom: 0.5rem;
-        }
-
-        .slide-info p {
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 1rem;
-        }
-
+        .slide-info { padding: 1.5rem; text-align: center; }
+        .slide-info h3 { font-size: 1rem; color: #2c1810; margin-bottom: 0.5rem; }
+        .slide-info p { font-size: 0.9rem; color: #666; margin-bottom: 1rem; }
         .btn-choose {
             background: linear-gradient(135deg, #c8a27a 0%, #b08b63 100%);
             color: white;
@@ -216,18 +91,8 @@
             transition: all 0.3s ease;
             font-size: 0.9rem;
         }
-
-        .btn-choose:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(200, 162, 122, 0.4);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem 5%;
-        }
-
+        .btn-choose:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(200, 162, 122, 0.4); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 5%; }
         .section-title {
             font-family: 'Playfair Display', serif;
             font-size: 2.5rem;
@@ -237,7 +102,6 @@
             position: relative;
             padding-bottom: 1rem;
         }
-
         .section-title::after {
             content: '';
             position: absolute;
@@ -248,68 +112,16 @@
             left: 50%;
             transform: translateX(-50%);
         }
-
-        .models-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .model-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-
-        .model-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
-        }
-
-        .model-img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-
+        .models-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; margin: 3rem 0; }
+        .model-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.1); transition: all 0.3s ease; cursor: pointer; }
+        .model-card:hover { transform: translateY(-15px); box-shadow: 0 20px 40px rgba(0,0,0,0.15); }
+        .model-img { width: 100%; height: 250px; object-fit: cover; transition: transform 0.3s ease; }
         .model-card:hover .model-img { transform: scale(1.08); }
-
         .model-details { padding: 1.5rem; }
-
-        .model-details h3 {
-            font-size: 1.3rem;
-            color: #2c1810;
-            margin-bottom: 0.5rem;
-        }
-
-        .model-details p {
-            font-size: 0.95rem;
-            color: #555;
-            margin-bottom: 0.7rem;
-            line-height: 1.5;
-        }
-
-        .model-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin: 1rem 0;
-        }
-
-        .tag {
-            background: linear-gradient(135deg, #e6c7a8, #ffdab9);
-            color: #2c1810;
-            padding: 0.4rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-
+        .model-details h3 { font-size: 1.3rem; color: #2c1810; margin-bottom: 0.5rem; }
+        .model-details p { font-size: 0.95rem; color: #555; margin-bottom: 0.7rem; line-height: 1.5; }
+        .model-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+        .tag { background: linear-gradient(135deg, #e6c7a8, #ffdab9); color: #2c1810; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.8rem; font-weight: 600; }
         .btn-choose-card {
             width: 100%;
             background: linear-gradient(135deg, #2c1810 0%, #4a3429 100%);
@@ -322,56 +134,14 @@
             transition: all 0.3s ease;
             margin-top: 1rem;
         }
-
-        .btn-choose-card:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 20px rgba(44, 24, 16, 0.3);
-        }
-
-        .contact-section {
-            background: linear-gradient(135deg, #2c1810 0%, #4a3429 100%);
-            color: white;
-            border-radius: 20px;
-            padding: 3rem;
-            margin: 3rem 0;
-        }
-
-        .contact-section h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
+        .btn-choose-card:hover { transform: scale(1.02); box-shadow: 0 8px 20px rgba(44, 24, 16, 0.3); }
+        .contact-section { background: linear-gradient(135deg, #2c1810 0%, #4a3429 100%); color: white; border-radius: 20px; padding: 3rem; margin: 3rem 0; }
+        .contact-section h2 { font-family: 'Playfair Display', serif; font-size: 2rem; margin-bottom: 2rem; text-align: center; }
         .form-group { margin-bottom: 1.5rem; }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.8rem;
-            border: none;
-            border-radius: 8px;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-        }
-
+        .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 600; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.8rem; border: none; border-radius: 8px; font-family: 'Poppins', sans-serif; }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
         .btn-submit {
             background: linear-gradient(135deg, #c8a27a 0%, #b08b63 100%);
             color: white;
@@ -384,20 +154,8 @@
             width: 100%;
             transition: all 0.3s ease;
         }
-
-        .btn-submit:hover {
-            transform: scale(1.02);
-            box-shadow: 0 10px 25px rgba(200, 162, 122, 0.4);
-        }
-
-        footer {
-            background: #2c1810;
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-
+        .btn-submit:hover { transform: scale(1.02); box-shadow: 0 10px 25px rgba(200, 162, 122, 0.4); }
+        footer { background: #2c1810; color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
         @media (max-width: 768px) {
             .hero-content h2 { font-size: 2.5rem; }
             .section-title { font-size: 2rem; }
@@ -410,23 +168,16 @@
 </head>
 <body>
 
-    <!-- Header -->
     <header>
-        <div class="logo">
-            <h1>✨ Céleste Couture ✨</h1>
-        </div>
+        <div class="logo"><h1>✨ Céleste Couture ✨</h1></div>
         <div class="contact-info">
             <a href="tel:+2290148701677"><i class="fas fa-phone"></i> +229 01 48 70 16 77</a>
             <a href="https://wa.me/2290148701677"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </div>
     </header>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/2290148701677" class="whatsapp-float" title="Chat sur WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <a href="https://wa.me/2290148701677" class="whatsapp-float" title="Chat sur WhatsApp"><i class="fab fa-whatsapp"></i></a>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="container">
             <div class="hero-content">
@@ -439,13 +190,11 @@
         </div>
     </section>
 
-    <!-- Models Section -->
     <section class="container">
         <h1 class="section-title">Nos Modèles Disponibles</h1>
         <div class="models-grid" id="modelsGrid"></div>
     </section>
 
-    <!-- Contact Section -->
     <section class="container">
         <div class="contact-section">
             <h2>📝 Personnalisez Votre Commande</h2>
@@ -475,7 +224,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>© 2025 Céleste Couture. Tous droits réservés. | Créations africaines authentiques 👗</p>
     </footer>
@@ -483,16 +231,16 @@
     <script>
         const models = [
             { name: "Jupe + Haut Crop Up 👕", description: "Ensemble dynamique avec haut court et jupe taille haute en wax - parfait pour l'été", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/3808362/pexels-photo-3808362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Pantalon Palazzo + Haut 👔", description: "Tenue élégante avec pantalon palazzo fluide et haut assorti en tissu béninois", for: "Femme", fabric: "Pagne", image: "https://images.pexels.com/photos/1078958/pexels-photo-1078958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+            { name: "Pantalon Palazzo + Haut 👔", description: "Tenue élégante avec pantalon palazzo fluide et haut assorti en tissu béninois", for: "Femme", fabric: "Pagne", image: "https://images.pexels.com/photos/3945689/pexels-photo-3945689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
             { name: "Robe 👗 Dos Ouvert", description: "Robe courte séduisante avec dos nu en wax imprimé africain", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/3945676/pexels-photo-3945676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
             { name: "Robe Longue Soirée ✨", description: "Robe élégante et longue en brocart pour les occasions spéciales", for: "Femme", fabric: "Brocart", image: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
             { name: "Robe Sexy & Moulante 💃", description: "Robe près du corps en wax avec motifs audacieux - look confident", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/3945695/pexels-photo-3945695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Ensemble Boubou Moderne 👑", description: "Grand boubou ample et confortable en tissu béninois brodé", for: "Femme", fabric: "Bazin Riche", image: "https://images.pexels.com/photos/1690353/pexels-photo-1690353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+            { name: "Ensemble Boubou Moderne 👑", description: "Grand boubou ample et confortable en tissu béninois brodé", for: "Femme", fabric: "Bazin Riche", image: "https://images.pexels.com/photos/16169342/pexels-photo-16169342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
             { name: "Robe Crayon Chic 👗", description: "Robe fourreau élégante en pagne avec motifs traditionnels", for: "Femme", fabric: "Pagne", image: "https://images.pexels.com/photos/1690351/pexels-photo-1690351.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
             { name: "Ensemble Cérémonie Luxe 💎", description: "Tenue festive complète avec brindilles de wax et accessoires assortis", for: "Femme", fabric: "Wax + Dentelle", image: "https://images.pexels.com/photos/1300550/pexels-photo-1300550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
             { name: "Robe Portefeuille Chaleureuse 🌸", description: "Robe nouée portefeuille en pagne coloré avec ceinture intégrée", for: "Femme", fabric: "Pagne", image: "https://images.pexels.com/photos/1321747/pexels-photo-1321747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
             { name: "Chemise Africaine Oversized 🧡", description: "Chemise large en wax pour style décontracté chic", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/1079786/pexels-photo-1079786.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Jupe Midi Plissée Classe 🎀", description: "Jupe midi avec plis en wax premium, idéale pour le bureau", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/3808362/pexels-photo-3808362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+            { name: "Jupe Midi Plissée Classe 🎀", description: "Jupe midi avec plis en wax premium, idéale pour le bureau", for: "Femme", fabric: "Wax", image: "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d26?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
             { name: "Ensemble Kaba Traditionnel 👰", description: "Kaba africain avec accessoires traditionnels en bazin riche", for: "Femme", fabric: "Bazin Riche", image: "https://images.pexels.com/photos/1690353/pexels-photo-1690353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
             { name: "Robe Évasée Fleurs 🌺", description: "Robe courte évasée avec motifs floraux en wax coloré", for: "Femme", fabric: "Wax", image: "https://images.unsplash.com/photo-1591195853826-7b4e3c7e8d2c?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
             { name: "Top Crop + Shorts Assorties 🩳", description: "Ensemble shorts avec crop top coordonné en wax vibrant", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/3808362/pexels-photo-3808362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
@@ -522,7 +270,7 @@
             { name: "Robe Camisole Sexy 🖤", description: "Robe fines bretelles en wax pour soirée", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/3945676/pexels-photo-3945676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
             { name: "Jupe Portefeuille Nouée 🎁", description: "Jupe portefeuille pratique en pagne avec nœud", for: "Femme", fabric: "Pagne", image: "https://images.pexels.com/photos/1690007/pexels-photo-1690007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
             { name: "Robe Dos Croisé Raffiné 🤍", description: "Robe avec dos croisé en wax épuré", for: "Femme", fabric: "Wax", image: "https://images.unsplash.com/photo-1591195853826-7b4e3c7e8d2c?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Ensemble Jumpsuit Feminin 💪", description: "Combinaison pantalon feminin en wax", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
+            { name: "Ensemble Jumpsuit Feminin 💪", description: "Combinaison pantalon feminin en wax", for: "Femme", fabric: "Wax", image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
             { name: "Robe Manches Volantes 🦋", description: "Robe avec manches amples volantes en wax", for: "Femme", fabric: "Wax", image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
             { name: "Robe Plissée Structurée 👑", description: "Robe plissée avec structure en bazin riche", for: "Femme", fabric: "Bazin Riche", image: "https://images.pexels.com/photos/1690353/pexels-photo-1690353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
             { name: "Robe Péplum Prononcé 🍑", description: "Robe avec effet péplum marqué en wax", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/1079780/pexels-photo-1079780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
@@ -588,37 +336,25 @@
         function redirectToWhatsApp(modelName = '') {
             const phoneNumber = '2290148701677';
             let message = 'Bonjour Céleste Couture, je suis intéressé(e) par vos créations africaines.';
-            
             if (modelName) {
                 message = `Bonjour Céleste Couture, je suis intéressé(e) par le modèle "${modelName}" en tissu béninois. Pouvez-vous me donner plus d'informations ?`;
             }
-            
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             window.open(whatsappURL, '_blank');
         }
 
         document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            
             const name = document.getElementById('name').value;
             const phone = document.getElementById('phone').value;
             const model = document.getElementById('modelSelect').value;
             const message = document.getElementById('message').value;
-            
             const phoneNumber = '2290148701677';
             let whatsappMessage = `Bonjour Céleste Couture, je suis ${name}.\n\n`;
             whatsappMessage += `📞 Téléphone: ${phone}\n`;
-            
-            if (model) {
-                whatsappMessage += `👗 Modèle intéressé: ${model}\n`;
-            }
-            
-            if (message) {
-                whatsappMessage += `📝 Message: ${message}\n`;
-            }
-            
+            if (model) { whatsappMessage += `👗 Modèle intéressé: ${model}\n`; }
+            if (message) { whatsappMessage += `📝 Message: ${message}\n`; }
             whatsappMessage += `\nJe suis intéressé(e) par vos créations en tissus béninois.`;
-            
             const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
             window.open(whatsappURL, '_blank');
         });
@@ -628,8 +364,7 @@
         populateModelSelect();
 
         const select = document.getElementById('modelSelect');
-        const firstOption = select.options[0];
-        firstOption.textContent = "Choisissez un modèle (optionnel)";
+        if (select.options[0]) select.options[0].textContent = "Choisissez un modèle (optionnel)";
     </script>
 </body>
 </html>
