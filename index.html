@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -208,19 +207,18 @@
             overflow: hidden;
             box-shadow: 0 15px 30px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
-            cursor: pointer;
         }
 
         .slide:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
 
         .slide img {
             width: 100%;
-            height: 350px;
+            height: 300px;
             object-fit: cover;
-            transition: transform 0.5s;
+            transition: transform 0.3s ease;
         }
 
         .slide:hover img {
@@ -229,184 +227,159 @@
 
         .slide-info {
             padding: 1.5rem;
-            background: white;
+            text-align: center;
         }
 
         .slide-info h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
+            font-size: 1rem;
             color: #2c1810;
+            margin-bottom: 0.5rem;
         }
 
         .slide-info p {
-            color: #6b4f3f;
             font-size: 0.9rem;
+            color: #666;
             margin-bottom: 1rem;
         }
 
         .btn-choose {
-            background: linear-gradient(135deg, #2c1810, #4a3429);
+            background: linear-gradient(135deg, #c8a27a 0%, #b08b63 100%);
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 0.7rem 1.5rem;
             border-radius: 25px;
-            font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s;
-            width: 100%;
-            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
         }
 
         .btn-choose:hover {
-            background: linear-gradient(135deg, #4a3429, #2c1810);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(200, 162, 122, 0.4);
         }
 
-        .models-section {
-            padding: 5rem 5%;
-            background: #fff;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 5%;
         }
 
         .section-title {
-            text-align: center;
             font-family: 'Playfair Display', serif;
-            font-size: 2.8rem;
+            font-size: 2.5rem;
+            text-align: center;
             color: #2c1810;
-            margin-bottom: 3rem;
+            margin: 2rem 0;
             position: relative;
+            padding-bottom: 1rem;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
             width: 80px;
             height: 3px;
-            background: linear-gradient(90deg, #c8a27a, #e6c7a8);
+            background: linear-gradient(90deg, #c8a27a, #b08b63);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .models-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
         }
 
         .model-card {
             background: white;
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
-            opacity: 0;
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        .model-card:nth-child(odd) {
-            animation-delay: 0.2s;
-        }
-
-        .model-card:nth-child(even) {
-            animation-delay: 0.4s;
+            cursor: pointer;
         }
 
         .model-card:hover {
             transform: translateY(-15px);
-            box-shadow: 0 25px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
 
         .model-img {
             width: 100%;
-            height: 380px;
+            height: 250px;
             object-fit: cover;
-            transition: transform 0.5s;
+            transition: transform 0.3s ease;
         }
 
         .model-card:hover .model-img {
-            transform: scale(1.05);
+            transform: scale(1.08);
         }
 
         .model-details {
-            padding: 1.8rem;
+            padding: 1.5rem;
         }
 
         .model-details h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
             color: #2c1810;
+            margin-bottom: 0.5rem;
         }
 
         .model-details p {
-            color: #6b4f3f;
-            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 0.7rem;
             line-height: 1.5;
         }
 
         .model-tags {
             display: flex;
-            gap: 10px;
-            margin: 1rem 0;
             flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
         }
 
         .tag {
-            background: #f0e0d4;
+            background: linear-gradient(135deg, #e6c7a8, #ffdab9);
             color: #2c1810;
-            padding: 5px 15px;
-            border-radius: 20px;
+            padding: 0.4rem 0.8rem;
+            border-radius: 15px;
             font-size: 0.8rem;
             font-weight: 600;
         }
 
-        .tag.african {
-            background: #c8a27a;
-            color: white;
-        }
-
         .btn-choose-card {
-            background: linear-gradient(135deg, #c8a27a, #b08b63);
+            width: 100%;
+            background: linear-gradient(135deg, #2c1810 0%, #4a3429 100%);
             color: white;
             border: none;
-            padding: 12px 25px;
+            padding: 0.8rem;
             border-radius: 25px;
-            font-weight: 600;
             cursor: pointer;
-            transition: all 0.3s;
-            width: 100%;
-            font-size: 1rem;
-            margin-top: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
         }
 
         .btn-choose-card:hover {
-            background: linear-gradient(135deg, #b08b63, #c8a27a);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(184, 142, 105, 0.4);
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(44, 24, 16, 0.3);
         }
 
-        .contact-form-section {
+        .contact-section {
             background: linear-gradient(135deg, #2c1810 0%, #4a3429 100%);
-            padding: 5rem 5%;
             color: white;
-        }
-
-        .form-container {
-            max-width: 700px;
-            margin: 0 auto;
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
+            border-radius: 20px;
             padding: 3rem;
-            border-radius: 30px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            border: 1px solid rgba(255,255,255,0.2);
+            margin: 3rem 0;
         }
 
-        .form-container h2 {
+        .contact-section h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 2rem;
             text-align: center;
         }
@@ -415,452 +388,489 @@
             margin-bottom: 1.5rem;
         }
 
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
         .form-group input,
         .form-group select,
         .form-group textarea {
             width: 100%;
-            padding: 15px;
+            padding: 0.8rem;
             border: none;
-            border-radius: 10px;
-            background: rgba(255,255,255,0.9);
+            border-radius: 8px;
             font-family: 'Poppins', sans-serif;
-            font-size: 1rem;
-            transition: all 0.3s;
         }
 
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            box-shadow: 0 0 0 3px #c8a27a;
-            transform: translateY(-2px);
+        .form-group textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
         }
 
         .btn-submit {
-            background: linear-gradient(45deg, #c8a27a, #e6c7a8);
-            color: #2c1810;
+            background: linear-gradient(135deg, #c8a27a 0%, #b08b63 100%);
+            color: white;
             border: none;
-            padding: 15px 40px;
-            border-radius: 30px;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-size: 1.1rem;
             font-weight: 700;
-            font-size: 1.2rem;
             cursor: pointer;
-            transition: all 0.3s;
             width: 100%;
+            transition: all 0.3s ease;
         }
 
         .btn-submit:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(230, 199, 168, 0.3);
-            background: linear-gradient(45deg, #e6c7a8, #c8a27a);
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(200, 162, 122, 0.4);
         }
 
         footer {
-            background: #1f130c;
-            color: #e6c7a8;
-            padding: 3rem 5%;
-            text-align: center;
-        }
-
-        .footer-content {
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-info h3 {
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 1rem;
+            background: #2c1810;
             color: white;
-        }
-
-        .footer-info p {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-info i {
-            margin-right: 10px;
-            color: #c8a27a;
-        }
-
-        .copyright {
-            border-top: 1px solid #4a3429;
-            padding-top: 2rem;
-            font-size: 0.9rem;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
         }
 
         @media (max-width: 768px) {
             .hero-content h2 {
                 font-size: 2.5rem;
             }
-            
-            .contact-info {
-                display: none;
-            }
-            
-            header {
-                justify-content: center;
-            }
-            
-            .slide {
-                flex: 0 0 250px;
-            }
-            
-            .slide img {
-                height: 300px;
-            }
-            
-            .form-container {
-                padding: 2rem;
-            }
-            
-            .models-grid {
-                grid-template-columns: 1fr;
-            }
-        }
 
-        @media (max-width: 480px) {
-            .hero-content h2 {
-                font-size: 2rem;
-            }
-            
             .section-title {
                 font-size: 2rem;
             }
-            
-            .slide {
-                flex: 0 0 200px;
+
+            .models-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info {
+                gap: 1rem;
+                font-size: 0.8rem;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 1rem;
             }
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="logo">
-            <h1>Céleste Couture</h1>
+            <h1>✨ Céleste Couture ✨</h1>
         </div>
         <div class="contact-info">
-            <a href="tel:+2290148701677"><i class="fas fa-phone-alt"></i> 0148701677</a>
-            <a href="https://wa.me/2290148701677" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
-            <a href="mailto:kpohihounhouefa@gmail.com"><i class="far fa-envelope"></i> Email</a>
-            <span><i class="fas fa-map-marker-alt"></i> Calavi Aïdégnon fin von Chez Fred</span>
+            <a href="tel:+2290148701677"><i class="fas fa-phone"></i> +229 01 48 70 16 77</a>
+            <a href="https://wa.me/2290148701677"><i class="fab fa-whatsapp"></i> WhatsApp</a>
         </div>
     </header>
 
-    <a href="https://wa.me/2290148701677" class="whatsapp-float" target="_blank">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/2290148701677" class="whatsapp-float" title="Chat sur WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h2>L'Élégance Africaine</h2>
-            <p>Tissus authentiques du Bénin, créations uniques pour femmes, demoiselles, enfants et tatas</p>
-        </div>
-        <div class="slider-container">
-            <div class="slider-track" id="sliderTrack">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Collection Africaine Exclusive</h2>
+                <p>Découvrez nos magnifiques modèles de couture en tissus africains authentiques</p>
+            </div>
+            <div class="slider-container">
+                <div class="slider-track" id="sliderTrack"></div>
             </div>
         </div>
     </section>
 
-    <section class="models-section" id="models">
-        <h2 class="section-title">Nos Créations Africaines</h2>
-        <div class="models-grid" id="modelsGrid">
-        </div>
+    <!-- Models Section -->
+    <section class="container">
+        <h1 class="section-title">Nos Modèles Disponibles</h1>
+        <div class="models-grid" id="modelsGrid"></div>
     </section>
 
-    <section class="contact-form-section">
-        <div class="form-container">
-            <h2>Demande de Renseignement</h2>
+    <!-- Contact Section -->
+    <section class="container">
+        <div class="contact-section">
+            <h2>📝 Personnalisez Votre Commande</h2>
             <form id="contactForm">
-                <div class="form-group">
-                    <input type="text" id="name" placeholder="Votre nom complet" required>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Votre Nom</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Téléphone</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
                 </div>
                 <div class="form-group">
-                    <input type="tel" id="phone" placeholder="Votre téléphone" required>
-                </div>
-                <div class="form-group">
-                    <select id="modelSelect" required>
-                        <option value="">Choisissez un modèle (optionnel)</option>
+                    <label for="modelSelect">Choisissez un modèle</label>
+                    <select id="modelSelect" name="modelSelect">
+                        <option value="">Sélectionnez un modèle...</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <textarea id="message" rows="4" placeholder="Votre message..." required></textarea>
+                    <label for="message">Vos spécifications / Vos demandes particulières</label>
+                    <textarea id="message" name="message" placeholder="Ex: taille, couleur préférée, ajustements spécifiques..."></textarea>
                 </div>
-                <button type="submit" class="btn-submit">Envoyer sur WhatsApp</button>
+                <button type="submit" class="btn-submit">Envoyer ma demande sur WhatsApp 💬</button>
             </form>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-info">
-                <h3>Céleste Couture</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Calavi Aïdégnon fin von Chez Fred, Bénin</p>
-                <p><i class="fas fa-phone"></i> 0148701677</p>
-                <p><i class="far fa-envelope"></i> kpohihounhouefa@gmail.com</p>
-            </div>
-            <div class="footer-info">
-                <h3>Horaires</h3>
-                <p>Lundi - Vendredi: 8h - 19h</p>
-                <p>Samedi: 9h - 17h</p>
-                <p>Dimanche: Fermé</p>
-            </div>
-            <div class="footer-info">
-                <h3>Suivez-nous</h3>
-                <p><i class="fab fa-instagram"></i> @celeste_couture</p>
-                <p><i class="fab fa-facebook"></i> Céleste Couture</p>
-                <p><i class="fab fa-whatsapp"></i> 0148701677</p>
-            </div>
-        </div>
-        <div class="copyright">
-            <p>&copy; 2026 Céleste Couture - Tous droits réservés</p>
-        </div>
+        <p>&copy; 2024 Céleste Couture. Tous droits réservés. | Créations africaines authentiques 👗</p>
     </footer>
 
     <script>
-        // Données des modèles 100% AFRICAINS avec images corrigées correspondant aux descriptions
         const models = [
             {
-                name: "Ensemble Mère et Fille",
-                description: "Tenues assorties en wax béninois pour maman et sa demoiselle - coupe moderne africaine",
-                for: "Femme, Enfant",
-                fabric: "Wax Béninois",
-                image: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/a4932920-49e8-4bfc-b242-576d62ed89f9.__CR0,0,970,600_PT0_SX970_V1___.jpg",
-                tags: ["Duo", "Assorti", "Mère-Fille", "Wax", "Bénin"]
-            },
-            {
-                name: "Roba Vodun",
-                description: "Robe longue en wax avec motifs vaudoun traditionnels du Bénin",
+                name: "Jupe + Haut Crop Up 👕",
+                description: "Ensemble dynamique avec haut court et jupe taille haute en wax - parfait pour l'été",
                 for: "Femme",
-                fabric: "Wax Béninois",
-                image: "https://i.etsystatic.com/7518594/r/il/5760cf/4065993763/il_fullxfull.4065993763_ohx9.jpg",
-                tags: ["Robe longue", "Vaudoun", "Wax", "Bénin"]
-            },
-            {
-                name: "Ensemble Adjaho",
-                description: "Ensemble jupe et haut en pagne tissé main de la région d'Adjaho",
-                for: "Femme",
-                fabric: "Tissé Béninois",
-                image: "https://m.media-amazon.com/images/I/61Nnv5-JjvL.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg",
-                tags: ["Ensemble", "Tissé main", "Adjaho", "Bénin"]
-            },
-            {
-                name: "Jupe Kpassè",
-                description: "Jupe midi en wax avec motifs de paniers tressés béninois",
-                for: "Demoiselle",
                 fabric: "Wax",
-                image: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/5d6b5db8-deef-4c8a-a62c-c2394588a933.__CR0,0,970,600_PT0_SX970_V1___.jpg",
-                tags: ["Jupe", "Midi", "Kpassè", "Bénin"]
+                image: "https://images.pexels.com/photos/3622622/pexels-photo-3622622.jpeg?auto=compress&cs=tinysrgb&w=600"
             },
             {
-                name: "Robe Bazin Bénin",
-                description: "Robe courte en bazin riche brodé main du Bénin",
+                name: "Pantalon Palazzo + Haut 👔",
+                description: "Tenue élégante avec pantalon palazzo fluide et haut assorti en tissu béninois",
                 for: "Femme",
-                fabric: "Bazin riche",
-                image: "https://m.media-amazon.com/images/I/81etvvrqMwL.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg",
-                tags: ["Bazin", "Robe courte", "Broderie", "Bénin"]
+                fabric: "Pagne",
+                image: "https://images.pexels.com/photos/2128383/pexels-photo-2128383.jpeg?auto=compress&cs=tinysrgb&w=600"
             },
             {
-                name: "Roba Tanti",
-                description: "Robe confortable pour tata en pagne tissé de la vallée de l'Ouémé",
-                for: "Tata",
-                fabric: "Lungi",
-                image: "https://i.ytimg.com/vi/rETEkiuibXA/maxresdefault.jpg",
-                tags: ["Tata", "Confort", "Lungi", "Ouémé", "Bénin"]
+                name: "Robe 👗 Dos Ouvert",
+                description: "Robe courte séduisante avec dos nu en wax imprimé africain",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/3632357/pexels-photo-3632357.jpeg?auto=compress&cs=tinysrgb&w=600"
             },
             {
-                name: "Caftan Abomey",
-                description: "Grand caftan en brocart avec motifs des rois d'Abomey",
+                name: "Robe Longue Soirée ✨",
+                description: "Robe élégante et longue en brocart pour les occasions spéciales",
                 for: "Femme",
                 fabric: "Brocart",
-                image: "https://m.media-amazon.com/images/I/61fuqlLQ7DL.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg",
-                tags: ["Caftan", "Abomey", "Brocart", "Bénin"]
+                image: "https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=600"
             },
             {
-                name: "Princesse Ouidah",
-                description: "Robe de cérémonie pour fillette en wax - inspiration Ouidah",
-                for: "Enfant",
-                fabric: "Wax",
-                image: "https://i.etsystatic.com/7761769/r/il/813724/1615757682/il_fullxfull.1615757682_4ll6.jpg",
-                tags: ["Enfant", "Princesse", "Ouidah", "Bénin"]
-            },
-            {
-                name: "Ensemble Porto-Novo",
-                description: "Ensemble pantalon et top en tissu kente - style Porto-Novo",
-                for: "Demoiselle",
-                fabric: "Kente",
-                image: "https://m.media-amazon.com/images/I/51UscWfk5YL.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg",
-                tags: ["Kente", "Porto-Novo", "Bénin"]
-            },
-            {
-                name: "Roba Dangbé",
-                description: "Robe patineuse en pagne avec motifs python (Dangbé) du Bénin",
+                name: "Robe Sexy & Moulante 💃",
+                description: "Robe près du corps en wax avec motifs audacieux - look confident",
                 for: "Femme",
-                fabric: "Pagne Béninois",
-                image: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/9c819eca-d35c-4455-888f-ac28ac137173.__CR0,0,970,600_PT0_SX970_V1___.jpg",
-                tags: ["Patineuse", "Dangbé", "Pagne", "Bénin"]
-            },
-            {
-                name: "Ensemble Yèkè",
-                description: "Tenue élégante pour nos aînées en bazin - modèle Yèkè",
-                for: "Tata",
-                fabric: "Bazin",
-                image: "https://i.etsystatic.com/25132813/r/il/80a65f/3472105712/il_fullxfull.3472105712_9ay6.jpg",
-                tags: ["Tata", "Bazin", "Yèkè", "Bénin"]
-            },
-            {
-                name: "Roba Zangbéto",
-                description: "Robe pour cérémonies traditionnelles inspirée des Zangbéto",
-                for: "Femme",
-                fabric: "Tissu traditionnel",
-                image: "https://flexiafrica.com/cdn/shop/files/african-baby-girl.png?v=1763886003&width=3840",
-                tags: ["Danse", "Zangbéto", "Bénin"]
-            },
-            {
-                name: "Jumelles Natitingou",
-                description: "Tenues identiques pour deux petites filles - tissu traditionnel",
-                for: "Enfant",
                 fabric: "Wax",
-                image: "https://m.media-amazon.com/images/I/71yeVzhXzAL.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg",
-                tags: ["Jumelles", "Natitingou", "Bénin"]
+                image: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=600"
             },
             {
-                name: "Rosa Bénin",
-                description: "Robe bustier en pagne avec motifs de roses du Bénin",
-                for: "Demoiselle",
-                fabric: "Wax",
-                image: "https://cdn-cms.f-static.net/uploads/1040687/800_5b19741eef56b.jpg",
-                tags: ["Bustier", "Roses", "Demoiselle", "Bénin"]
-            },
-            {
-                name: "Tunique Parakou",
-                description: "Tunique brodée pour grandes occasions - style Parakou",
-                for: "Tata",
-                fabric: "Bazin riche",
-                image: "https://flexiafrica.co.nz/cdn/shop/files/remove-the-up-50.png?v=1765939052&width=3840",
-                tags: ["Tunique", "Parakou", "Bazin", "Bénin"]
-            },
-            {
-                name: "Roba Pendjari",
-                description: "Robe longue en velours avec ceinture perle - inspiration Pendjari",
+                name: "Ensemble Boubou Moderne 👑",
+                description: "Grand boubou ample et confortable en tissu béninois brodé",
                 for: "Femme",
-                fabric: "Velours",
-                image: "https://d17a17kld06uk8.cloudfront.net/products/3X8E7FZ/8XDVR8EW-large.webp",
-                tags: ["Velours", "Longue", "Pendjari", "Bénin"]
+                fabric: "Bazin Riche",
+                image: "https://images.pexels.com/photos/3945671/pexels-photo-3945671.jpeg?auto=compress&cs=tinysrgb&w=600"
             },
             {
-                name: "Ensemble Grand Marché",
-                description: "Haut col V et jupe crayon en pagne - style Grand Marché de Cotonou",
+                name: "Robe Crayon Chic 👗",
+                description: "Robe fourreau élégante en pagne avec motifs traditionnels",
                 for: "Femme",
                 fabric: "Pagne",
-                image: "https://zawadi254.com/wp-content/uploads/2023/10/african-dresses.jpg",
-                tags: ["Crayon", "Grand Marché", "Cotonou", "Bénin"]
+                image: "https://images.pexels.com/photos/3807507/pexels-photo-3807507.jpeg?auto=compress&cs=tinysrgb&w=600"
             },
             {
-                name: "Robe Demoiselle",
-                description: "Robe courte en wax pour demoiselle, coupe moderne africaine",
-                for: "Demoiselle",
-                fabric: "Wax",
-                image: "http://www.diyanu.com/cdn/shop/articles/african-print-dresses-for-prom-celebrating-culture-with-style-8760371.jpg?v=1760579486&width=2048",
-                tags: ["Courte", "Moderne", "Demoiselle", "Bénin"]
-            },
-            {
-                name: "Boubou Reine",
-                description: "Grand boubou en tissu brodé main du Bénin pour cérémonies",
+                name: "Ensemble Cérémonie Luxe 💎",
+                description: "Tenue festive complète avec brindilles de wax et accessoires assortis",
                 for: "Femme",
-                fabric: "Bazin",
-                image: "https://gpjs3bucket.s3.amazonaws.com/wp-content/uploads/2015/04/26215842/o-jpg.jpg",
-                tags: ["Boubou", "Reine", "Cérémonie", "Bénin"]
+                fabric: "Wax + Dentelle",
+                image: "https://images.pexels.com/photos/2995285/pexels-photo-2995285.jpeg?auto=compress&cs=tinysrgb&w=600"
             },
             {
-                name: "Roba Pluie",
-                description: "Robe imprimée wax avec motifs de pluie (tradition béninoise)",
-                for: "Femme",
-                fabric: "Wax",
-                image: "https://img.alicdn.com/imgextra/i1/6000000003462/O1CN01apdVN11bRdthY58Hm_!!6000000003462-0-tbvideo.jpg",
-                tags: ["Imprimé", "Pluie", "Wax", "Bénin"]
-            },
-            {
-                name: "Fillette Djègbadji",
-                description: "Robe courte pour fillette en wax - style Djègbadji",
-                for: "Enfant",
-                fabric: "Wax",
-                image: "https://c8.alamy.com/comp/BM6965/colored-traditional-dress-of-masai-women-masai-mara-kenya-east-africa-BM6965.jpg",
-                tags: ["Enfant", "Djègbadji", "Wax", "Bénin"]
-            },
-            {
-                name: "Roba Aklala",
-                description: "Robe portefeuille en pagne avec motifs aklala du Bénin",
+                name: "Robe Portefeuille Chaleureuse 🌸",
+                description: "Robe nouée portefeuille en pagne coloré avec ceinture intégrée",
                 for: "Femme",
                 fabric: "Pagne",
-                image: "https://m.media-amazon.com/images/I/71274IPxB2L.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg",
-                tags: ["Portefeuille", "Aklala", "Pagne", "Bénin"]
+                image: "https://images.pexels.com/photos/3807535/pexels-photo-3807535.jpeg?auto=compress&cs=tinysrgb&w=600"
             },
             {
-                name: "Mariage Coutumier",
-                description: "Ensemble complet pour mariage coutumier béninois",
+                name: "Chemise Africaine Oversized 🧡",
+                description: "Chemise large en wax pour style décontracté chic",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/2542654/pexels-photo-2542654.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Jupe Midi Plissée Classe 🎀",
+                description: "Jupe midi avec plis en wax premium, idéale pour le bureau",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/1690007/pexels-photo-1690007.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Ensemble Kaba Traditionnel 👰",
+                description: "Kaba africain avec accessoires traditionnels en bazin riche",
+                for: "Femme",
+                fabric: "Bazin Riche",
+                image: "https://images.pexels.com/photos/3945676/pexels-photo-3945676.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Évasée Fleurs 🌺",
+                description: "Robe courte évasée avec motifs floraux en wax coloré",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/3622657/pexels-photo-3622657.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Top Crop + Shorts Assorties 🩳",
+                description: "Ensemble shorts avec crop top coordonné en wax vibrant",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/3808362/pexels-photo-3808362.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Chemise Casual ♥️",
+                description: "Robe chemise décontractée en pagne avec ceinture",
+                for: "Femme",
+                fabric: "Pagne",
+                image: "https://images.pexels.com/photos/3957077/pexels-photo-3957077.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Ensemble Mariage Coutumier 💍",
+                description: "Tenue complète pour mariage traditionnel béninois",
                 for: "Femme",
                 fabric: "Bazin + Wax",
-                image: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/e8c17635-46ff-4bd6-b10e-27c62e1091c6.__CR0,0,970,600_PT0_SX970_V1___.jpg",
-                tags: ["Mariage", "Coutumier", "Bénin"]
+                image: "https://images.pexels.com/photos/1043395/pexels-photo-1043395.jpeg?auto=compress&cs=tinysrgb&w=600"
             },
             {
-                name: "Fiancée Sakété",
-                description: "Robe mi-longue en dentelle et pagne - style Sakété",
-                for: "Demoiselle",
-                fabric: "Dentelle + Pagne",
-                image: "https://c8.alamy.com/comp/3D09TW6/benin-ouidah-district-portrait-of-a-woman-in-traditional-dress-during-a-voodoo-ceremony-3D09TW6.jpg",
-                tags: ["Fiancée", "Sakété", "Dentelle", "Bénin"]
-            },
-            {
-                name: "Maman Moderne",
-                description: "Tenue confortable pour future maman en tissu béninois",
-                for: "Femme",
-                fabric: "Lungi",
-                image: "http://news.bbc.co.uk/media/images/45857000/jpg/_45857581_dyeing1_bbc_766.jpg",
-                tags: ["Maternité", "Lungi", "Bénin"]
-            },
-            {
-                name: "Rolex Cotonou",
-                description: "Ensemble top et foulard assorti en wax de Cotonou",
-                for: "Femme",
-                fabric: "Wax",
-                image: "https://flexiafrica.com/cdn/shop/files/new-arrivals-african-clothing-mens-without-text.png?v=1765939347&width=3840",
-                tags: ["Top", "Foulard", "Cotonou", "Bénin"]
-            },
-            {
-                name: "Kaba Allada",
-                description: "Kaba moderne en tissu béninois d'Allada",
-                for: "Tata",
-                fabric: "Tissu Béninois",
-                image: "https://i.ytimg.com/vi/h4SQMZalNC0/maxresdefault.jpg",
-                tags: ["Kaba", "Allada", "Tata", "Bénin"]
-            },
-            {
-                name: "Sœurs Kétou",
-                description: "Tenues assorties pour deux sœurs - tissu traditionnel de Kétou",
-                for: "Enfant, Demoiselle",
-                fabric: "Wax",
-                image: "https://m.media-amazon.com/images/S/aplus-media-library-service-media/a4932920-49e8-4bfc-b242-576d62ed89f9.__CR0,0,970,600_PT0_SX970_V1___.jpg",
-                tags: ["Sœurs", "Kétou", "Bénin"]
-            },
-            {
-                name: "Soirée Grand Popo",
-                description: "Robe longue fendue en brocart - inspiration Grand Popo",
+                name: "Gilet Long Sophistiqué 🧥",
+                description: "Gilet long ouvert en brocart sur robe ou pantalon",
                 for: "Femme",
                 fabric: "Brocart",
-                image: "https://i.etsystatic.com/7518594/r/il/5760cf/4065993763/il_fullxfull.4065993763_ohx9.jpg",
-                tags: ["Soirée", "Grand Popo", "Brocart", "Bénin"]
+                image: "https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&w=600"
             },
             {
-                name: "Villageoise Tchaourou",
-                description: "Ensemble traditionnel pour cérémonies de village - Tchaourou",
-                for: "Tata",
-                fabric: "Tissu traditionnel",
-                image: "https://m.media-amazon.com/images/I/61Nnv5-JjvL.jpg_BO30,255,255,255_UF750,750_SR1910,1000,0,C_QL100_.jpg",
-                tags: ["Traditionnel", "Tchaourou", "Bénin"]
+                name: "Robe Fendue Sensuelle 🔥",
+                description: "Robe longue fendue sur le côté en wax premium",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/3945695/pexels-photo-3945695.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Ensemble Tête + Corps Assorti 👑",
+                description: "Robe avec foulard assorti en wax - look complet et coordonné",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/1170911/pexels-photo-1170911.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Dos Nu Élégante 🌙",
+                description: "Robe au dos totalement dégagé en wax imprimé",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Costume Pantalon Feminin 💼",
+                description: "Costume complet avec veste et pantalon en wax",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/2769274/pexels-photo-2769274.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Trapèze Confortable 😊",
+                description: "Robe ample trapèze en pagne parfaite pour le quotidien",
+                for: "Femme",
+                fabric: "Pagne",
+                image: "https://images.pexels.com/photos/3763418/pexels-photo-3763418.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Asymétrique Moderne 🎨",
+                description: "Robe avec coupes asymétriques en wax design",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/1926791/pexels-photo-1926791.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Demoiselle Colorée 🌈",
+                description: "Robe courte jeune fille en wax avec motifs gais",
+                for: "Enfant",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/3738098/pexels-photo-3738098.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Ensemble Pagne & Headwrap 🎀",
+                description: "Robe pagne + turban assorti style festival",
+                for: "Femme",
+                fabric: "Pagne",
+                image: "https://images.pexels.com/photos/1170917/pexels-photo-1170917.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Cache-Cœur Flatteur 💛",
+                description: "Robe nouée cache-cœur en wax qui amincie",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/1321747/pexels-photo-1321747.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Tunique Longue Relaxe 🌸",
+                description: "Tunique ample et confortable en tissu béninois",
+                for: "Femme",
+                fabric: "Pagne",
+                image: "https://images.pexels.com/photos/3945689/pexels-photo-3945689.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Patineuse Jeunesse 🎪",
+                description: "Robe patineuse avec jupon en wax pour jeune fille",
+                for: "Enfant",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Pantalon Jean-Africain 👖",
+                description: "Pantalon style jean en wax avec motifs africains",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Sac Minimaliste ⚫",
+                description: "Robe simple et épurée en wax uni ou motifs discrets",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/1055673/pexels-photo-1055673.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Jupe Maxi Bohème 🌾",
+                description: "Jupe longue bohème en pagne avec la taille élastique",
+                for: "Femme",
+                fabric: "Pagne",
+                image: "https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Bustier Sexy 💃",
+                description: "Robe bustier sans bretelles en wax premium",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/3632357/pexels-photo-3632357.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Ensemble Hauts Strapless 👗",
+                description: "Top bandeau assorti à une jupe longue",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Pinafore Tendance 👧",
+                description: "Robe tablier courte en wax style école moderne",
+                for: "Enfant",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/3738098/pexels-photo-3738098.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Midi Épaules Dénudées 🌺",
+                description: "Robe épaules nues longueur midi en wax coloré",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/3945695/pexels-photo-3945695.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Imprimé Géométrique 🔷",
+                description: "Robe avec motifs géométriques africains en wax",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/1321747/pexels-photo-1321747.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Chemisier Broché Luxe ✨",
+                description: "Chemisier en brocart avec finitions élégantes",
+                for: "Femme",
+                fabric: "Brocart",
+                image: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Camisole Sexy 🖤",
+                description: "Robe fines bretelles en wax pour soirée",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/3945676/pexels-photo-3945676.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Jupe Portefeuille Nouée 🎁",
+                description: "Jupe portefeuille pratique en pagne avec nœud",
+                for: "Femme",
+                fabric: "Pagne",
+                image: "https://images.pexels.com/photos/1690007/pexels-photo-1690007.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Dos Croisé Raffiné 🤍",
+                description: "Robe avec dos croisé en wax épuré",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/1926791/pexels-photo-1926791.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Ensemble Jumpsuit Feminin 💪",
+                description: "Combinaison pantalon feminin en wax",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Manches Volantes 🦋",
+                description: "Robe avec manches amples volantes en wax",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/1926791/pexels-photo-1926791.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Plissée Structurée 👑",
+                description: "Robe plissée avec structure en bazin riche",
+                for: "Femme",
+                fabric: "Bazin Riche",
+                image: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Péplum Prononcé 🍑",
+                description: "Robe avec effet péplum marqué en wax",
+                for: "Femme",
+                fabric: "Wax",
+                image: "https://images.pexels.com/photos/1321747/pexels-photo-1321747.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Ballroom Céremonie 💎",
+                description: "Grande robe de bal pour événements importants",
+                for: "Femme",
+                fabric: "Brocart + Dentelle",
+                image: "https://images.pexels.com/photos/1043395/pexels-photo-1043395.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Robe Longueur Maxi Fluide 🌊",
+                description: "Robe maxi en pagne fluide et confortable",
+                for: "Femme",
+                fabric: "Pagne",
+                image: "https://images.pexels.com/photos/3945689/pexels-photo-3945689.jpeg?auto=compress&cs=tinysrgb&w=600"
+            },
+            {
+                name: "Blouse Bohème Détails Dentelle 🌼",
+                description: "Blouse ample avec dentelle en pagne",
+                for: "Femme",
+                fabric: "Pagne + Dentelle",
+                image: "https://images.pexels.com/photos/2542654/pexels-photo-2542654.jpeg?auto=compress&cs=tinysrgb&w=600"
             }
         ];
 
@@ -869,11 +879,11 @@
             const allSlides = [...models, ...models];
             sliderTrack.innerHTML = allSlides.map(model => `
                 <div class="slide">
-                    <img src="${model.image}" alt="${model.name}" onerror="this.src='https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=400'">
+                    <img src="${model.image}" alt="${model.name}" onerror="this.src='https://via.placeholder.com/300x300?text=Image+Non+Disponible'" loading="lazy">
                     <div class="slide-info">
                         <h3>${model.name}</h3>
                         <p>${model.description.substring(0, 60)}...</p>
-                        <button class="btn-choose" onclick="redirectToWhatsApp('${model.name}')">Choisir ce modèle</button>
+                        <button class="btn-choose" onclick="redirectToWhatsApp('${model.name.replace(/'/g, "\\'")}')">Choisir ce modèle</button>
                     </div>
                 </div>
             `).join('');
@@ -883,16 +893,17 @@
             const modelsGrid = document.getElementById('modelsGrid');
             modelsGrid.innerHTML = models.map(model => `
                 <div class="model-card">
-                    <img src="${model.image}" alt="${model.name}" class="model-img" onerror="this.src='https://images.unsplash.com/photo-1539008835657-9e8e9680c956?w=400'">
+                    <img src="${model.image}" alt="${model.name}" class="model-img" onerror="this.src='https://via.placeholder.com/300x300?text=Image+Non+Disponible'" loading="lazy">
                     <div class="model-details">
                         <h3>${model.name}</h3>
                         <p>${model.description}</p>
                         <p><strong>Pour:</strong> ${model.for}</p>
                         <p><strong>Tissu:</strong> ${model.fabric}</p>
                         <div class="model-tags">
-                            ${model.tags.map(tag => `<span class="tag african">${tag}</span>`).join('')}
+                            <span class="tag">${model.fabric}</span>
+                            <span class="tag">${model.for}</span>
                         </div>
-                        <button class="btn-choose-card" onclick="redirectToWhatsApp('${model.name}')">Choisir ce modèle</button>
+                        <button class="btn-choose-card" onclick="redirectToWhatsApp('${model.name.replace(/'/g, "\\'")}')">Choisir ce modèle</button>
                     </div>
                 </div>
             `).join('');
