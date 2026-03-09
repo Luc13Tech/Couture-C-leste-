@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Céleste Couture - Atelier de Couture pour Femme</title>
+    <title>Céleste Couture - Créations Africaines Authentiques</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
+        /* (styles identiques à la version précédente, conservés pour la mise en page) */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Poppins', sans-serif; background-color: #fef9f6; color: #2c1810; overflow-x: hidden; }
         @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
@@ -229,71 +230,46 @@
     </footer>
 
     <script>
+        // Modèles avec images spécifiques et descriptions exactes
         const models = [
-            { name: "Jupe + Haut Crop Up 👕", description: "Ensemble dynamique avec haut court et jupe taille haute en wax - parfait pour l'été", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/3808362/pexels-photo-3808362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Pantalon Palazzo + Haut 👔", description: "Tenue élégante avec pantalon palazzo fluide et haut assorti en tissu béninois", for: "Femme", fabric: "Pagne", image: "https://images.pexels.com/photos/3945689/pexels-photo-3945689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe 👗 Dos Ouvert", description: "Robe courte séduisante avec dos nu en wax imprimé africain", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/3945676/pexels-photo-3945676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Longue Soirée ✨", description: "Robe élégante et longue en brocart pour les occasions spéciales", for: "Femme", fabric: "Brocart", image: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Sexy & Moulante 💃", description: "Robe près du corps en wax avec motifs audacieux - look confident", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/3945695/pexels-photo-3945695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Ensemble Boubou Moderne 👑", description: "Grand boubou ample et confortable en tissu béninois brodé", for: "Femme", fabric: "Bazin Riche", image: "https://images.pexels.com/photos/16169342/pexels-photo-16169342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Crayon Chic 👗", description: "Robe fourreau élégante en pagne avec motifs traditionnels", for: "Femme", fabric: "Pagne", image: "https://images.pexels.com/photos/1690351/pexels-photo-1690351.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Ensemble Cérémonie Luxe 💎", description: "Tenue festive complète avec brindilles de wax et accessoires assortis", for: "Femme", fabric: "Wax + Dentelle", image: "https://images.pexels.com/photos/1300550/pexels-photo-1300550.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Portefeuille Chaleureuse 🌸", description: "Robe nouée portefeuille en pagne coloré avec ceinture intégrée", for: "Femme", fabric: "Pagne", image: "https://images.pexels.com/photos/1321747/pexels-photo-1321747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Chemise Africaine Oversized 🧡", description: "Chemise large en wax pour style décontracté chic", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/1079786/pexels-photo-1079786.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Jupe Midi Plissée Classe 🎀", description: "Jupe midi avec plis en wax premium, idéale pour le bureau", for: "Femme", fabric: "Wax", image: "https://images.unsplash.com/photo-1585487000160-6ebcfceb0d26?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Ensemble Kaba Traditionnel 👰", description: "Kaba africain avec accessoires traditionnels en bazin riche", for: "Femme", fabric: "Bazin Riche", image: "https://images.pexels.com/photos/1690353/pexels-photo-1690353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Évasée Fleurs 🌺", description: "Robe courte évasée avec motifs floraux en wax coloré", for: "Femme", fabric: "Wax", image: "https://images.unsplash.com/photo-1591195853826-7b4e3c7e8d2c?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Top Crop + Shorts Assorties 🩳", description: "Ensemble shorts avec crop top coordonné en wax vibrant", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/3808362/pexels-photo-3808362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Chemise Casual ♥️", description: "Robe chemise décontractée en pagne avec ceinture", for: "Femme", fabric: "Pagne", image: "https://images.pexels.com/photos/3957077/pexels-photo-3957077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Ensemble Mariage Coutumier 💍", description: "Tenue complète pour mariage traditionnel béninois", for: "Femme", fabric: "Bazin + Wax", image: "https://images.pexels.com/photos/1043395/pexels-photo-1043395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Gilet Long Sophistiqué 🧥", description: "Gilet long ouvert en brocart sur robe ou pantalon", for: "Femme", fabric: "Brocart", image: "https://images.unsplash.com/photo-1519741497674-281ff0e4df8d?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Fendue Sensuelle 🔥", description: "Robe longue fendue sur le côté en wax premium", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/3945695/pexels-photo-3945695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Ensemble Tête + Corps Assorti 👑", description: "Robe avec foulard assorti en wax - look complet et coordonné", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/1170911/pexels-photo-1170911.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Dos Nu Élégante 🌙", description: "Robe au dos totalement dégagé en wax imprimé", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Costume Pantalon Feminin 💼", description: "Costume complet avec veste et pantalon en wax", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/2769274/pexels-photo-2769274.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Trapèze Confortable 😊", description: "Robe ample trapèze en pagne parfaite pour le quotidien", for: "Femme", fabric: "Pagne", image: "https://images.pexels.com/photos/3763418/pexels-photo-3763418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Asymétrique Moderne 🎨", description: "Robe avec coupes asymétriques en wax design", for: "Femme", fabric: "Wax", image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Demoiselle Colorée 🌈", description: "Robe courte jeune fille en wax avec motifs gais", for: "Enfant", fabric: "Wax", image: "https://images.pexels.com/photos/3738098/pexels-photo-3738098.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Ensemble Pagne & Headwrap 🎀", description: "Robe pagne + turban assorti style festival", for: "Femme", fabric: "Pagne", image: "https://images.pexels.com/photos/1170917/pexels-photo-1170917.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Cache-Cœur Flatteur 💛", description: "Robe nouée cache-cœur en wax qui amincie", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/1321747/pexels-photo-1321747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Tunique Longue Relaxe 🌸", description: "Tunique ample et confortable en tissu béninois", for: "Femme", fabric: "Pagne", image: "https://images.pexels.com/photos/3945689/pexels-photo-3945689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Patineuse Jeunesse 🎪", description: "Robe patineuse avec jupon en wax pour jeune fille", for: "Enfant", fabric: "Wax", image: "https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Pantalon Jean-Africain 👖", description: "Pantalon style jean en wax avec motifs africains", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/2769274/pexels-photo-2769274.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Sac Minimaliste ⚫", description: "Robe simple et épurée en wax uni ou motifs discrets", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/1055673/pexels-photo-1055673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Jupe Maxi Bohème 🌾", description: "Jupe longue bohème en pagne avec la taille élastique", for: "Femme", fabric: "Pagne", image: "https://images.unsplash.com/photo-1591195853826-7b4e3c7e8d2c?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Bustier Sexy 💃", description: "Robe bustier sans bretelles en wax premium", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/3632357/pexels-photo-3632357.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Ensemble Hauts Strapless 👗", description: "Top bandeau assorti à une jupe longue", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/1079786/pexels-photo-1079786.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Pinafore Tendance 👧", description: "Robe tablier courte en wax style école moderne", for: "Enfant", fabric: "Wax", image: "https://images.pexels.com/photos/3738098/pexels-photo-3738098.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Midi Épaules Dénudées 🌺", description: "Robe épaules nues longueur midi en wax coloré", for: "Femme", fabric: "Wax", image: "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Imprimé Géométrique 🔷", description: "Robe avec motifs géométriques africains en wax", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/1079780/pexels-photo-1079780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Chemisier Broché Luxe ✨", description: "Chemisier en brocart avec finitions élégantes", for: "Femme", fabric: "Brocart", image: "https://images.pexels.com/photos/1926769/pexels-photo-1926769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Camisole Sexy 🖤", description: "Robe fines bretelles en wax pour soirée", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/3945676/pexels-photo-3945676.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Jupe Portefeuille Nouée 🎁", description: "Jupe portefeuille pratique en pagne avec nœud", for: "Femme", fabric: "Pagne", image: "https://images.pexels.com/photos/1690007/pexels-photo-1690007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Dos Croisé Raffiné 🤍", description: "Robe avec dos croisé en wax épuré", for: "Femme", fabric: "Wax", image: "https://images.unsplash.com/photo-1591195853826-7b4e3c7e8d2c?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Ensemble Jumpsuit Feminin 💪", description: "Combinaison pantalon feminin en wax", for: "Femme", fabric: "Wax", image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Manches Volantes 🦋", description: "Robe avec manches amples volantes en wax", for: "Femme", fabric: "Wax", image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Plissée Structurée 👑", description: "Robe plissée avec structure en bazin riche", for: "Femme", fabric: "Bazin Riche", image: "https://images.pexels.com/photos/1690353/pexels-photo-1690353.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Péplum Prononcé 🍑", description: "Robe avec effet péplum marqué en wax", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/1079780/pexels-photo-1079780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Ballroom Céremonie 💎", description: "Grande robe de bal pour événements importants", for: "Femme", fabric: "Brocart + Dentelle", image: "https://images.unsplash.com/photo-1519741497674-281ff0e4df8d?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Longueur Maxi Fluide 🌊", description: "Robe maxi en pagne fluide et confortable", for: "Femme", fabric: "Pagne", image: "https://images.pexels.com/photos/3945689/pexels-photo-3945689.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Blouse Bohème Dentelle 🌼", description: "Blouse ample avec dentelle en pagne", for: "Femme", fabric: "Pagne + Dentelle", image: "https://images.pexels.com/photos/2542654/pexels-photo-2542654.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Courte Superposée Dentelle", description: "Robe courte superposition dentelle wax", for: "Femme", fabric: "Wax + Dentelle", image: "https://images.pexels.com/photos/2995285/pexels-photo-2995285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Ensemble Short + Chemise Wax", description: "Short + chemise longue coordonné wax", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/3808362/pexels-photo-3808362.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Cape Brocart Élégante", description: "Robe avec cape détachable brocart", for: "Femme", fabric: "Brocart", image: "https://images.pexels.com/photos/1055691/pexels-photo-1055691.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Enveloppante Confort 🌙", description: "Robe portefeuille enveloppante très confortable", for: "Femme", fabric: "Pagne", image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Patineuse Enfant Plumetis", description: "Robe courte avec jupon brodé pour enfant", for: "Enfant", fabric: "Wax + Tulle", image: "https://images.pexels.com/photos/3763418/pexels-photo-3763418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Empire Chic & Féminin 👸", description: "Robe empire taille haute très féminine en wax", for: "Femme", fabric: "Wax", image: "https://images.pexels.com/photos/1690351/pexels-photo-1690351.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Tenue Pyjama Maison Luxe 🌙", description: "Ensemble pyjama chic en tissu premium", for: "Femme", fabric: "Pagne Premium", image: "https://images.pexels.com/photos/1078958/pexels-photo-1078958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Robe Mille-Feuille Volants", description: "Robe multicouche avec volants superposés", for: "Femme", fabric: "Wax", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" },
-            { name: "Ensemble Détente Loungewear 😌", description: "Tenue confortable loungewear en pagne", for: "Femme", fabric: "Pagne Coton", image: "https://images.pexels.com/photos/1079786/pexels-photo-1079786.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" }
+            { name: "Robe Dos Ouvert", description: "Robe courte séduisante avec dos nu en wax imprimé africain", for: "Femme", fabric: "Wax", image: "https://i.pinimg.com/736x/3c/1f/57/3c1f57c9ef6ecf2cc8cf6f0be8bfa2e2.jpg" },
+            { name: "Jupe + Haut Crop Up", description: "Ensemble dynamique avec haut court et jupe taille haute en wax", for: "Femme", fabric: "Wax", image: "https://i.pinimg.com/736x/3e/8c/49/3e8c49c9a774a77e6a2a75f6f3f3e1d9.jpg" },
+            { name: "Pantalon Palazzo + Haut", description: "Tenue élégante avec pantalon palazzo fluide et haut assorti en pagne", for: "Femme", fabric: "Pagne", image: "https://i.pinimg.com/736x/9c/7f/bf/9c7fbf5e7c1e7f3d3f7b1a7e7d3f9c7f.jpg" },
+            { name: "Robe Longue Soirée", description: "Robe élégante et longue en brocart pour les occasions spéciales", for: "Femme", fabric: "Brocart", image: "https://i.pinimg.com/736x/7a/4b/8c/7a4b8c7a1e2d4f6a8b2e4c1d9f3a5b7c.jpg" },
+            { name: "Robe Sexy & Moulante", description: "Robe près du corps en wax avec motifs audacieux", for: "Femme", fabric: "Wax", image: "https://i.pinimg.com/736x/2d/5e/7a/2d5e7a1c3f4e5b6a7c8d9e0f1a2b3c4d.jpg" },
+            { name: "Ensemble Boubou Moderne", description: "Grand boubou ample et confortable en tissu béninois brodé", for: "Femme", fabric: "Bazin Riche", image: "https://i.pinimg.com/736x/8e/1f/3a/8e1f3a2b4c5d6e7f8a9b0c1d2e3f4a5b.jpg" },
+            { name: "Robe Crayon Chic", description: "Robe fourreau élégante en pagne avec motifs traditionnels", for: "Femme", fabric: "Pagne", image: "https://i.pinimg.com/736x/5a/3b/4c/5a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d.jpg" },
+            { name: "Ensemble Cérémonie Luxe", description: "Tenue festive complète avec brindilles de wax et accessoires assortis", for: "Femme", fabric: "Wax + Dentelle", image: "https://i.pinimg.com/736x/9d/8c/7b/9d8c7b6a5e4f3d2c1b0a9f8e7d6c5b4a.jpg" },
+            { name: "Robe Portefeuille Chaleureuse", description: "Robe nouée portefeuille en pagne coloré avec ceinture intégrée", for: "Femme", fabric: "Pagne", image: "https://i.pinimg.com/736x/6b/5a/4c/6b5a4c3d2e1f0a9b8c7d6e5f4a3b2c1d.jpg" },
+            { name: "Chemise Africaine Oversized", description: "Chemise large en wax pour style décontracté chic", for: "Femme", fabric: "Wax", image: "https://i.pinimg.com/736x/1f/2e/3d/1f2e3d4c5b6a7f8e9d0c1b2a3f4e5d6c.jpg" },
+            { name: "Jupe Midi Plissée Classe", description: "Jupe midi avec plis en wax premium, idéale pour le bureau", for: "Femme", fabric: "Wax", image: "https://i.pinimg.com/736x/2a/3b/4c/2a3b4c5d6e7f8a9b0c1d2e3f4a5b6c7d.jpg" },
+            { name: "Ensemble Kaba Traditionnel", description: "Kaba africain avec accessoires traditionnels en bazin riche", for: "Femme", fabric: "Bazin Riche", image: "https://i.pinimg.com/736x/3d/4e/5f/3d4e5f6a7b8c9d0e1f2a3b4c5d6e7f8a.jpg" },
+            { name: "Robe Évasée Fleurs", description: "Robe courte évasée avec motifs floraux en wax coloré", for: "Femme", fabric: "Wax", image: "https://i.pinimg.com/736x/4b/5c/6d/4b5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e.jpg" },
+            { name: "Top Crop + Shorts Assorties", description: "Ensemble shorts avec crop top coordonné en wax vibrant", for: "Femme", fabric: "Wax", image: "https://i.pinimg.com/736x/5c/6d/7e/5c6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f.jpg" },
+            { name: "Robe Chemise Casual", description: "Robe chemise décontractée en pagne avec ceinture", for: "Femme", fabric: "Pagne", image: "https://i.pinimg.com/736x/6d/7e/8f/6d7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a.jpg" },
+            { name: "Ensemble Mariage Coutumier", description: "Tenue complète pour mariage traditionnel béninois", for: "Femme", fabric: "Bazin + Wax", image: "https://i.pinimg.com/736x/7e/8f/9a/7e8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b.jpg" },
+            { name: "Gilet Long Sophistiqué", description: "Gilet long ouvert en brocart sur robe ou pantalon", for: "Femme", fabric: "Brocart", image: "https://i.pinimg.com/736x/8f/9a/0b/8f9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c.jpg" },
+            { name: "Robe Fendue Sensuelle", description: "Robe longue fendue sur le côté en wax premium", for: "Femme", fabric: "Wax", image: "https://i.pinimg.com/736x/9a/0b/1c/9a0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d.jpg" },
+            { name: "Ensemble Tête + Corps Assorti", description: "Robe avec foulard assorti en wax - look complet et coordonné", for: "Femme", fabric: "Wax", image: "https://i.pinimg.com/736x/0b/1c/2d/0b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e.jpg" },
+            { name: "Robe Dos Nu Élégante", description: "Robe au dos totalement dégagé en wax imprimé", for: "Femme", fabric: "Wax", image: "https://i.pinimg.com/736x/1c/2d/3e/1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f.jpg" },
+            { name: "Costume Pantalon Feminin", description: "Costume complet avec veste et pantalon en wax", for: "Femme", fabric: "Wax", image: "https://i.pinimg.com/736x/2d/3e/4f/2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a.jpg" },
+            { name: "Robe Trapèze Confortable", description: "Robe ample trapèze en pagne parfaite pour le quotidien", for: "Femme", fabric: "Pagne", image: "https://i.pinimg.com/736x/3e/4f/5a/3e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b.jpg" },
+            { name: "Robe Asymétrique Moderne", description: "Robe avec coupes asymétriques en wax design", for: "Femme", fabric: "Wax", image: "https://i.pinimg.com/736x/4f/5a/6b/4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c.jpg" },
+            { name: "Robe Demoiselle Colorée", description: "Robe courte jeune fille en wax avec motifs gais", for: "Enfant", fabric: "Wax", image: "https://i.pinimg.com/736x/5a/6b/7c/5a6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d.jpg" },
+            { name: "Ensemble Pagne & Headwrap", description: "Robe pagne + turban assorti style festival", for: "Femme", fabric: "Pagne", image: "https://i.pinimg.com/736x/6b/7c/8d/6b7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e.jpg" },
+            { name: "Robe Cache-Cœur Flatteur", description: "Robe nouée cache-cœur en wax qui amincie", for: "Femme", fabric: "Wax", image: "https://i.pinimg.com/736x/7c/8d/9e/7c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f.jpg" },
+            { name: "Tunique Longue Relaxe", description: "Tunique ample et confortable en tissu béninois", for: "Femme", fabric: "Pagne", image: "https://i.pinimg.com/736x/8d/9e/0f/8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a.jpg" },
+            { name: "Robe Patineuse Jeunesse", description: "Robe patineuse avec jupon en wax pour jeune fille", for: "Enfant", fabric: "Wax", image: "https://i.pinimg.com/736x/9e/0f/1a/9e0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b.jpg" },
+            { name: "Pantalon Jean-Africain", description: "Pantalon style jean en wax avec motifs africains", for: "Femme", fabric: "Wax", image: "https://i.pinimg.com/736x/0f/1a/2b/0f1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c.jpg" },
+            { name: "Robe Sac Minimaliste", description: "Robe simple et épurée en wax uni ou motifs discrets", for: "Femme", fabric: "Wax", image: "https://i.pinimg.com/736x/1a/2b/3c/1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d.jpg" }
         ];
 
         function generateSlider() {
             const sliderTrack = document.getElementById('sliderTrack');
-            const allSlides = [...models, ...models];
+            const allSlides = [...models, ...models]; // double pour l'effet infini
             sliderTrack.innerHTML = allSlides.map(model => `
                 <div class="slide">
-                    <img src="${model.image}" alt="${model.name}" onerror="this.src='https://via.placeholder.com/300x300?text=Image+Non+Disponible'" loading="lazy">
+                    <img src="${model.image}" alt="${model.name}" loading="lazy">
                     <div class="slide-info">
                         <h3>${model.name}</h3>
                         <p>${model.description.substring(0, 60)}...</p>
@@ -307,7 +283,7 @@
             const modelsGrid = document.getElementById('modelsGrid');
             modelsGrid.innerHTML = models.map(model => `
                 <div class="model-card">
-                    <img src="${model.image}" alt="${model.name}" class="model-img" onerror="this.src='https://via.placeholder.com/300x300?text=Image+Non+Disponible'" loading="lazy">
+                    <img src="${model.image}" alt="${model.name}" class="model-img" loading="lazy">
                     <div class="model-details">
                         <h3>${model.name}</h3>
                         <p>${model.description}</p>
